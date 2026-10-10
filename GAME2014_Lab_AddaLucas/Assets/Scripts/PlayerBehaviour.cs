@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -67,6 +68,14 @@ public class PlayerBehaviour : MonoBehaviour
             pos.x = horizontalBounds.max;
             rb.position = pos;
             rb.linearVelocity = new Vector2(0.0f, rb.linearVelocity.y);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Bullet"))
+        {
+            SceneManager.LoadScene("End");
         }
     }
 }
