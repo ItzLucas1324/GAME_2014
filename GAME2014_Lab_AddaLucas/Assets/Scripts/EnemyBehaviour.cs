@@ -60,7 +60,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject bullet = pool.GetBullet(pool.enemyBulletPrefab);
+        GameObject bullet = pool.GetBullet(BulletType.Bullet.Enemy);
         bullet.transform.position = bulletSpawn.transform.position;
         bullet.transform.rotation = bulletSpawn.transform.rotation;
 

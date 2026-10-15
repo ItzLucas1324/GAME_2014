@@ -35,6 +35,8 @@ public class BulletScript : MonoBehaviour
 
     private void DeactivateBullet()
     {
+        if (!gameObject.activeSelf) return;
+
         if (bulletType == BulletType.Bullet.Enemy)
         {
             pool.ReturnObject(pool.enemyBulletPool, gameObject);
@@ -47,6 +49,8 @@ public class BulletScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!gameObject.activeSelf) return;
+
         if (collision.CompareTag("Player") && bulletType == BulletType.Bullet.Enemy)
         {
             DeactivateBullet();
@@ -54,8 +58,12 @@ public class BulletScript : MonoBehaviour
         }
         else if (collision.CompareTag("Enemy") && bulletType == BulletType.Bullet.Player)
         {
+            if (!collision.gameObject.activeSelf) return;
+
             DeactivateBullet();
             manager.UpdateScore(2);
+
+            collision.gameObject.SetActive(false);
             Destroy(collision.gameObject);
 
             enemySpawn = FindAnyObjectByType<EnemySpawn>();

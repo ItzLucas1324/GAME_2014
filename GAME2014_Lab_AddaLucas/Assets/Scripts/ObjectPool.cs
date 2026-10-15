@@ -3,26 +3,40 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
-    public GameObject enemyBulletPrefab, playerBulletPrefab, enemyPrefab;
+    public GameObject enemyPrefab;
     public Queue<GameObject> enemyBulletPool = new Queue<GameObject>();
     public Queue<GameObject> playerBulletPool = new Queue<GameObject>();
     public Queue<GameObject> enemyPool = new Queue<GameObject>();
 
-    BulletFactory factory = null;
+    BulletFactory factory;
 
-    private void Start()
+    private void Awake()
     {
         factory = GetComponent<BulletFactory>();
     }
 
-    public GameObject GetBullet(GameObject bullet)
+    public GameObject GetBullet(BulletType.Bullet type)
     {
-        if (bullet.TryGetComponent(out BulletScript script) && script.Type == BulletType.Bullet.Enemy)
+        Queue<GameObject> queue = playerBulletPool;
+
+        if (type == BulletType.Bullet.Enemy)
         {
-            return GetObject(enemyBulletPool, enemyBulletPrefab);
+            queue = enemyBulletPool;
         }
 
-        return GetObject(playerBulletPool, playerBulletPrefab);
+        GameObject obj;
+
+        if (queue.Count > 0)
+        {
+            obj = queue.Dequeue();
+        }
+        else
+        {
+            obj = factory.CreateBullet(type);
+        }
+
+        obj.SetActive(true);
+        return obj;
     }
 
     public GameObject GetEnemy()
@@ -32,17 +46,13 @@ public class ObjectPool : MonoBehaviour
 
     public void ReturnBullet(GameObject obj, BulletType.Bullet type)
     {
-        switch (type)
+        if (type == BulletType.Bullet.Enemy)
         {
-            case BulletType.Bullet.Enemy:
-                ReturnObject(enemyBulletPool, obj);
-                break;
-            case BulletType.Bullet.Player:
-                ReturnObject(playerBulletPool, obj);
-                break;
-            default:
-                Debug.Log("You messed up big dawg");
-                break;
+            ReturnObject(enemyBulletPool, obj);
+        }
+        else
+        {
+            ReturnObject(playerBulletPool, obj);
         }
     }
 
@@ -60,9 +70,7 @@ public class ObjectPool : MonoBehaviour
             return obj;
         }
         
-        return Instantiate(prefab);
-        
-        //GameObject tempBullet = factory.CreateBullet();
+        return Instantiate(prefab);        
     }
 
     public void ReturnObject(Queue<GameObject> queue, GameObject obj)

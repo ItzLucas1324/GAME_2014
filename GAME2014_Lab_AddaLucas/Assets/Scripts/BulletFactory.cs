@@ -17,10 +17,11 @@ public class BulletFactory : MonoBehaviour
             case BulletType.Bullet.Player:
                 tempBullet = Instantiate(playerBullet);
                 break;
+            default:
+                Debug.LogError($"Unhandled bullet type: {type}");
+                break;
         }
 
-        tempBullet.transform.SetParent(transform);
-        tempBullet.SetActive(false);
         return tempBullet;
     }
 }
