@@ -3,14 +3,26 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
-    public GameObject bulletPrefab, enemyPrefab;
-    public Queue<GameObject> bulletPool = new Queue<GameObject>();
-
+    public GameObject enemyBulletPrefab, playerBulletPrefab, enemyPrefab;
+    public Queue<GameObject> enemyBulletPool = new Queue<GameObject>();
+    public Queue<GameObject> playerBulletPool = new Queue<GameObject>();
     public Queue<GameObject> enemyPool = new Queue<GameObject>();
 
-    public GameObject GetBullet()
+    BulletFactory factory = null;
+
+    private void Start()
     {
-        return GetObject(bulletPool, bulletPrefab);
+        factory = GetComponent<BulletFactory>();
+    }
+
+    public GameObject GetBullet(GameObject bullet)
+    {
+        if (bullet.TryGetComponent(out BulletScript script) && script.Type == BulletType.Bullet.Enemy)
+        {
+            return GetObject(enemyBulletPool, enemyBulletPrefab);
+        }
+
+        return GetObject(playerBulletPool, playerBulletPrefab);
     }
 
     public GameObject GetEnemy()
@@ -20,7 +32,14 @@ public class ObjectPool : MonoBehaviour
 
     public void ReturnBullet(GameObject obj)
     {
-        ReturnObject(bulletPool, obj);
+        if (obj.TryGetComponent(out BulletScript script) && script.Type == BulletType.Bullet.Enemy)
+        {
+            GetObject(enemyBulletPool, obj);
+        }
+        else
+        {
+            GetObject(playerBulletPool, obj);
+        }
     }
 
     public void ReturnEnemy(GameObject obj)
@@ -32,12 +51,14 @@ public class ObjectPool : MonoBehaviour
     {
         if (queue.Count > 0)
         {
-            GameObject obj = bulletPool.Dequeue();
+            GameObject obj = enemyBulletPool.Dequeue();
             obj.SetActive(true);
             return obj;
         }
-
+        
         return Instantiate(prefab);
+        
+        //GameObject tempBullet = factory.CreateBullet();
     }
 
     public void ReturnObject(Queue<GameObject> queue, GameObject obj)

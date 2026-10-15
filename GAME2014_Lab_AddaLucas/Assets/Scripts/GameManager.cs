@@ -4,6 +4,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text scoreText;
+
     int score;
 
     void Start()

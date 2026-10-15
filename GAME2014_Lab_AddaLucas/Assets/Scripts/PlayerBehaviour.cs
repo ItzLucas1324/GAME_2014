@@ -1,11 +1,15 @@
+using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    [SerializeField] private float horizontalForce;
+    [SerializeField] private float horizontalForce, time;
     [SerializeField] private Boundary horizontalBounds;
+    [SerializeField] Transform bulletSpawn;
+    ObjectPool pool;
+    public float shootingTime = 0.5f, shootingSpeed = 3.0f;
 
     [Range(0.0f, 1.0f)] public float decay;
 
@@ -13,7 +17,9 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Start()
     {
+        pool = FindAnyObjectByType<ObjectPool>();
         rb = GetComponent<Rigidbody2D>();
+        time = shootingTime;
     }
 
     void FixedUpdate()
@@ -21,6 +27,29 @@ public class PlayerBehaviour : MonoBehaviour
         rb.linearVelocity *= (1.0f * decay);
         Move();
         CheckBounds();
+    }
+
+    private void Update()
+    {
+        time -= Time.deltaTime;
+        if (time <= 0)
+        {
+            Shoot();
+        }
+    }
+
+    private void Shoot()
+    {
+        GameObject bullet = pool.GetBullet(pool.playerBulletPrefab);
+        bullet.transform.position = bulletSpawn.transform.position;
+        bullet.transform.rotation = bulletSpawn.transform.rotation;
+
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+
+        if (rb != null)
+            rb.linearVelocity = transform.up * shootingSpeed;
+
+        time = shootingTime;
     }
 
     private float GetTouchDirections()

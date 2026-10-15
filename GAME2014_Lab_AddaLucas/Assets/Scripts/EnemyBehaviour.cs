@@ -45,7 +45,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject bullet = pool.GetBullet();
+        GameObject bullet = pool.GetBullet(pool.enemyBulletPrefab);
         bullet.transform.position = bulletSpawn.transform.position;
         bullet.transform.rotation = bulletSpawn.transform.rotation;
 
