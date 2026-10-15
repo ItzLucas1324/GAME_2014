@@ -9,7 +9,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private Boundary horizontalBounds;
     [SerializeField] Transform bulletSpawn;
     ObjectPool pool;
-    public float shootingTime = 0.5f, shootingSpeed = 3.0f;
+    public float shootingTime = 0.5f, shootingSpeed = 8.0f;
 
     [Range(0.0f, 1.0f)] public float decay;
 

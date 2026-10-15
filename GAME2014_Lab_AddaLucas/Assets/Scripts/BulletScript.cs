@@ -20,27 +20,39 @@ public class BulletScript : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.y <= screenBottom || transform.position.y >= screenTop)
+        if (transform.position.y <= screenBottom && bulletType == BulletType.Bullet.Enemy)
         {
-            DeactivateBullet(gameObject);
+            DeactivateBullet();
             manager.UpdateScore(1);
+        }
+        else if (transform.position.y >= screenTop && bulletType == BulletType.Bullet.Player)
+        {
+            DeactivateBullet();
         }
     }
 
-    private void DeactivateBullet(GameObject bullet)
+    private void DeactivateBullet()
     {
-        pool.ReturnObject(pool.enemyBulletPool, bullet);
+        if (bulletType == BulletType.Bullet.Enemy)
+        {
+            pool.ReturnObject(pool.enemyBulletPool, gameObject);
+        }
+        else if (bulletType == BulletType.Bullet.Player)
+        {
+            pool.ReturnObject(pool.playerBulletPool, gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && bulletType == BulletType.Bullet.Enemy)
         {
-            DeactivateBullet(gameObject);
+            DeactivateBullet();
         }
         else if (collision.CompareTag("Enemy") && bulletType == BulletType.Bullet.Player)
         {
-            DeactivateBullet(gameObject);
+            DeactivateBullet();
+            manager.UpdateScore(2);
         }
     }
 }

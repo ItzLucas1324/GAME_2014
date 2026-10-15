@@ -944,6 +944,10 @@ PrefabInstance:
       propertyPath: bulletSpawn
       value: 
       objectReference: {fileID: 1946676825}
+    - target: {fileID: 5111945480097581081, guid: 462160f96fcfef5468583fe82886a73d, type: 3}
+      propertyPath: shootingTime
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5988730008945690712, guid: 462160f96fcfef5468583fe82886a73d, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.48

@@ -30,15 +30,19 @@ public class ObjectPool : MonoBehaviour
         return GetObject(enemyPool, enemyPrefab);
     }
 
-    public void ReturnBullet(GameObject obj)
+    public void ReturnBullet(GameObject obj, BulletType.Bullet type)
     {
-        if (obj.TryGetComponent(out BulletScript script) && script.Type == BulletType.Bullet.Enemy)
+        switch (type)
         {
-            GetObject(enemyBulletPool, obj);
-        }
-        else
-        {
-            GetObject(playerBulletPool, obj);
+            case BulletType.Bullet.Enemy:
+                ReturnObject(enemyBulletPool, obj);
+                break;
+            case BulletType.Bullet.Player:
+                ReturnObject(playerBulletPool, obj);
+                break;
+            default:
+                Debug.Log("You messed up big dawg");
+                break;
         }
     }
 
@@ -51,7 +55,7 @@ public class ObjectPool : MonoBehaviour
     {
         if (queue.Count > 0)
         {
-            GameObject obj = enemyBulletPool.Dequeue();
+            GameObject obj = queue.Dequeue();
             obj.SetActive(true);
             return obj;
         }
