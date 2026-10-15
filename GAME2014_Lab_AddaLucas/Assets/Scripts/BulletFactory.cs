@@ -5,8 +5,6 @@ public class BulletFactory : MonoBehaviour
     [SerializeField] private GameObject enemyBullet;
     [SerializeField] private GameObject playerBullet;
 
-    private BulletType bulletType;
-
     public GameObject CreateBullet(BulletType.Bullet type)
     {
         GameObject tempBullet = null;
@@ -24,15 +22,5 @@ public class BulletFactory : MonoBehaviour
         tempBullet.transform.SetParent(transform);
         tempBullet.SetActive(false);
         return tempBullet;
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
     }
 }

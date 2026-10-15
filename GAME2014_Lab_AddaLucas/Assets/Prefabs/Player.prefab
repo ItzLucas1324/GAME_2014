@@ -115,8 +115,10 @@ MonoBehaviour:
     min: -4
     max: 4
   bulletSpawn: {fileID: 7326476837793964902}
-  shootingTime: 0.5
-  shootingSpeed: 3
+  healthSlider: {fileID: 0}
+  shootingTime: 1.5
+  shootingSpeed: 8
+  health: 0
   decay: 0.944
 --- !u!50 &267644151190351104
 Rigidbody2D:

@@ -1,15 +1,19 @@
-using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerBehaviour : MonoBehaviour
 {
     [SerializeField] private float horizontalForce, time;
     [SerializeField] private Boundary horizontalBounds;
     [SerializeField] Transform bulletSpawn;
+    [SerializeField] Slider healthSlider;
     ObjectPool pool;
     public float shootingTime = 0.5f, shootingSpeed = 8.0f;
+
+    [SerializeField] private int health;
+    private int currentHealth;
 
     [Range(0.0f, 1.0f)] public float decay;
 
@@ -17,6 +21,10 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Start()
     {
+        health = 10;
+        currentHealth = health;
+        healthSlider.maxValue = health;
+        healthSlider.value = currentHealth;
         pool = FindAnyObjectByType<ObjectPool>();
         rb = GetComponent<Rigidbody2D>();
         time = shootingTime;
@@ -100,10 +108,14 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void DealPlayerHealth(int amount)
     {
-        if (collision.CompareTag("Bullet"))
+        currentHealth -= amount;
+        healthSlider.value = currentHealth;
+
+        if (currentHealth <= 0)
         {
+            gameObject.SetActive(false);
             SceneManager.LoadScene("End");
         }
     }
