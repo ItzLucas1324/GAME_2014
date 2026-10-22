@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BulletBehaviour : MonoBehaviour
 {
-    [SerializeField] private ObjectManager.ObjectType bulletType;
+    public ObjectManager.ObjectType bulletType;
     [SerializeField] private float offscreenMargin = 1f;
     private ObjectManager manager;
     private float bottomBound;
@@ -34,6 +34,27 @@ public class BulletBehaviour : MonoBehaviour
             {
                 manager.ReturnObject(bulletType, gameObject);
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy") && bulletType == ObjectManager.ObjectType.PlayerBullet)
+        {
+            GameObject enemy = collision.gameObject;
+            EnemyController enemyController = enemy.GetComponent<EnemyController>();
+            enemyController.TakeDamage(1);
+
+            manager.ReturnObject(ObjectManager.ObjectType.PlayerBullet, gameObject);
+        }
+
+        if (collision.CompareTag("Player") && bulletType == ObjectManager.ObjectType.EnemyBullet)
+        {
+            GameObject player = collision.gameObject;
+            PlayerController playerController = player.GetComponent<PlayerController>();
+            playerController.TakeDamage(1);
+
+            manager.ReturnObject(ObjectManager.ObjectType.EnemyBullet, gameObject);
         }
     }
 }

@@ -7,6 +7,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] Vector2 shotTimerRange = new Vector2(1, 3);
     [SerializeField] private float offscreenMargin = 1f;
+    [SerializeField] private int health = 2;
+    private int currentHealth;
     private float timer, shotTimer, bottomBound, turnInput, turn;
     Rigidbody2D rb;
     private bool canSwing;
@@ -31,6 +33,8 @@ public class EnemyController : MonoBehaviour
         timer = 0f;
         turn = 0f;
         turnInput = 0f;
+
+        currentHealth = health;
 
         int swingOdds = Random.Range(0, 2);
 
@@ -92,6 +96,18 @@ public class EnemyController : MonoBehaviour
             enemyRb.linearVelocity = new Vector2(0f, -shotSpeed);
 
             shotTimer = Random.Range(shotTimerRange.x, shotTimerRange.y);
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+
+        if (currentHealth <= 0)
+        {
+            manager.ReturnObject(ObjectManager.ObjectType.Enemy, gameObject);
+            spawner.currentEnemyCount--;
+            // increase score
         }
     }
 }

@@ -1,11 +1,15 @@
 using UnityEngine;
+using UnityEngine.UI;
 using Terresquall;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Transform topBound, bottomBound, bulletSpawn;
     [SerializeField] private Animator animator;
+    [SerializeField] private Slider healthBar;
     [SerializeField] private float turnSpeed = 4.0f, shotSpeed = 3f, shotTimer = 1f, moveSpeed = 2.0f;
+    [SerializeField] private int health = 10;
+    private int currentHealth;
     ObjectManager manager;
     EnemyDetection enemyDetection;
     Vector2 movement;
@@ -22,6 +26,9 @@ public class PlayerController : MonoBehaviour
         manager = FindAnyObjectByType<ObjectManager>();
         enemyDetection = FindAnyObjectByType<EnemyDetection>();
         timer = 0f;
+        currentHealth = health;
+        healthBar.maxValue = health;
+        healthBar.value = currentHealth;
     }
 
     void Update()
@@ -75,5 +82,17 @@ public class PlayerController : MonoBehaviour
         playerBulletRb.linearVelocity = new Vector2(0f, shotSpeed);
 
         timer = shotTimer;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.value = currentHealth;
+
+        if (currentHealth <= 0)
+        {
+            gameObject.SetActive(false);
+            Debug.Log("You got fricked");
+        }
     }
 }
