@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour
     Rigidbody2D rb;
     private bool canSwing;
     ObjectManager manager;
+    EnemySpawner spawner;
     Camera cam;
 
     private void Awake()
@@ -18,6 +19,8 @@ public class EnemyController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         manager = FindAnyObjectByType<ObjectManager>();
+
+        spawner = FindAnyObjectByType<EnemySpawner>();
 
         cam = Camera.main;
         bottomBound = cam.ViewportToWorldPoint(new Vector3(0f, 0f, 0f)).y - offscreenMargin;
@@ -45,6 +48,7 @@ public class EnemyController : MonoBehaviour
         if (transform.position.y <= bottomBound)
         {
             manager.ReturnObject(ObjectManager.ObjectType.Enemy, gameObject);
+            spawner.currentEnemyCount--;
             return;
         }
 

@@ -3,24 +3,25 @@ using Terresquall;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private Transform topBound, bottomBound;
+    [SerializeField] private Transform topBound, bottomBound, bulletSpawn;
     [SerializeField] private Animator animator;
-    [SerializeField] private float turnSpeed = 4.0f;
+    [SerializeField] private float turnSpeed = 4.0f, shotSpeed = 3f, shotTimer = 1f;
+    ObjectManager manager;
+    EnemyDetection enemyDetection;
     Vector2 movement;
     public float moveSpeed = 2.0f;
     Rigidbody2D rb;
     private Camera cam;
-    private float halfWidth, turn;
+    private float halfWidth, turn, timer;
 
     private void Awake()
     {
         cam = Camera.main;
         halfWidth = GetComponent<Collider2D>().bounds.extents.x;
-    }
-
-    void Start()
-    {
         rb = GetComponent<Rigidbody2D>();
+        manager = FindAnyObjectByType<ObjectManager>();
+        enemyDetection = FindAnyObjectByType<EnemyDetection>();
+        timer = 0f;
     }
 
     void Update()
@@ -34,6 +35,17 @@ public class PlayerController : MonoBehaviour
 
         turn = Mathf.MoveTowards(turn, moveX, turnSpeed * Time.deltaTime);
         animator.SetFloat("BankTime", (turn + 1.0f) / 2.0f);
+
+
+        if (enemyDetection.canShoot)
+        {
+            timer -= Time.deltaTime;
+
+            if (timer <= 0)
+            {
+                Shoot();
+            }
+        }
     }
 
     private void FixedUpdate()
@@ -52,5 +64,16 @@ public class PlayerController : MonoBehaviour
 
         pos.x = Mathf.Clamp(pos.x, left + halfWidth, right - halfWidth);
         transform.position = pos;
+    }
+
+    private void Shoot()
+    {
+        GameObject playerBullet = manager.GetObject(ObjectManager.ObjectType.PlayerBullet);
+        playerBullet.transform.position = bulletSpawn.transform.position;
+        
+        Rigidbody2D playerBulletRb = playerBullet.GetComponent<Rigidbody2D>();
+        playerBulletRb.linearVelocity = new Vector2(0f, shotSpeed);
+
+        timer = shotTimer;
     }
 }
