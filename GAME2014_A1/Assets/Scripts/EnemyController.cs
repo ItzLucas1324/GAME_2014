@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 3.0f, swingLength, swingSpeed, shotSpeed = 4.0f;
+    [SerializeField] private float moveSpeed = 3.0f, swingLength, swingSpeed, shotSpeed = 4.0f, turnSpeed = 8.0f;
     [SerializeField] private Transform bulletSpawn;
+    [SerializeField] private Animator animator;
     [SerializeField] Vector2 shotTimerRange = new Vector2(1, 3);
     [SerializeField] private float offscreenMargin = 1f;
-    private float timer, shotTimer, bottomBound;
+    private float timer, shotTimer, bottomBound, turnInput, turn;
     Rigidbody2D rb;
     private bool canSwing;
     ObjectManager manager;
@@ -19,11 +20,14 @@ public class EnemyController : MonoBehaviour
         manager = FindAnyObjectByType<ObjectManager>();
 
         cam = Camera.main;
+        bottomBound = cam.ViewportToWorldPoint(new Vector3(0f, 0f, 0f)).y - offscreenMargin;
     }
 
-    void Start()
+    void OnEnable()
     {
-        bottomBound = cam.ViewportToWorldPoint(new Vector3(0f, 0f, 0f)).y - offscreenMargin;
+        timer = 0f;
+        turn = 0f;
+        turnInput = 0f;
 
         int swingOdds = Random.Range(0, 2);
 
@@ -38,6 +42,12 @@ public class EnemyController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (transform.position.y <= bottomBound)
+        {
+            manager.ReturnObject(ObjectManager.ObjectType.Enemy, gameObject);
+            return;
+        }
+
         shotTimer -= Time.fixedDeltaTime;
 
         if (shotTimer <= 0)
@@ -46,20 +56,24 @@ public class EnemyController : MonoBehaviour
         }
 
         float x = 0f;
+        turnInput = 0f;
 
         if (canSwing)
         {
             timer += Time.fixedDeltaTime;
-            x = Mathf.Cos(timer * swingSpeed) * swingLength * swingSpeed;
+            float wave = Mathf.Cos(timer * swingSpeed);
+
+            x = wave * swingLength * swingSpeed;
+            turnInput = wave;
         }
 
         rb.linearVelocity = new Vector2(x, -moveSpeed);
+    }
 
-        if (transform.position.y <= bottomBound)
-        {
-            manager.ReturnObject(ObjectManager.ObjectType.Enemy, gameObject);
-            return;
-        }
+    private void Update()
+    {
+        turn = Mathf.MoveTowards(turn, turnInput, turnSpeed * Time.deltaTime);
+        animator.SetFloat("BankTime", (turn + 1f) / 2f);
     }
 
     private void Shoot()

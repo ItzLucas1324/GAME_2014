@@ -4,7 +4,7 @@ using Terresquall;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Transform topBound, bottomBound;
-    [SerializeField] private Animator an;
+    [SerializeField] private Animator animator;
     [SerializeField] private float turnSpeed = 4.0f;
     Vector2 movement;
     public float moveSpeed = 2.0f;
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
         CheckBounds();
 
         turn = Mathf.MoveTowards(turn, moveX, turnSpeed * Time.deltaTime);
-        an.SetFloat("BankTime", (turn + 1.0f) / 2.0f);
+        animator.SetFloat("BankTime", (turn + 1.0f) / 2.0f);
     }
 
     private void FixedUpdate()
