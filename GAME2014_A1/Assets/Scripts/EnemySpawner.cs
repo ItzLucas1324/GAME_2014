@@ -32,6 +32,10 @@ public class EnemySpawner : MonoBehaviour
                 SpawnEnemy();
             }
         }
+        else
+        {
+            Debug.Log("Max amount of enemies spawned!");
+        }
     }
 
     private void SpawnEnemy()

@@ -5,14 +5,14 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Transform topBound, bottomBound, bulletSpawn;
     [SerializeField] private Animator animator;
-    [SerializeField] private float turnSpeed = 4.0f, shotSpeed = 3f, shotTimer = 1f;
+    [SerializeField] private float turnSpeed = 4.0f, shotSpeed = 3f, shotTimer = 1f, moveSpeed = 2.0f;
     ObjectManager manager;
     EnemyDetection enemyDetection;
     Vector2 movement;
-    public float moveSpeed = 2.0f;
     Rigidbody2D rb;
     private Camera cam;
-    private float halfWidth, turn, timer;
+    private float halfWidth, turn;
+    [System.NonSerialized] public float timer;
 
     private void Awake()
     {

@@ -3,11 +3,13 @@ using UnityEngine;
 public class EnemyDetection : MonoBehaviour
 {
     GameObject player;
+    PlayerController playerController;
     public bool canShoot = false;
 
     void Start()
     {
         player = GameObject.Find("Player");
+        playerController = player.GetComponent<PlayerController>();
     }
 
     void Update()
@@ -19,6 +21,7 @@ public class EnemyDetection : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
+            playerController.timer = 0f;
             canShoot = true;
         }
     }
