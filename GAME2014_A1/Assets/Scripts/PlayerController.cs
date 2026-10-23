@@ -12,7 +12,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int health = 10;
     [System.NonSerialized] public bool isPlayerAlive = true;
     private int currentHealth;
-    ObjectManager manager;
+    ObjectManager objManager;
+    GameManager gameManager;
     EnemyDetection enemyDetection;
     Vector2 movement;
     Rigidbody2D rb;
@@ -25,12 +26,14 @@ public class PlayerController : MonoBehaviour
         cam = Camera.main;
         halfWidth = GetComponent<Collider2D>().bounds.extents.x;
         rb = GetComponent<Rigidbody2D>();
-        manager = FindAnyObjectByType<ObjectManager>();
+        objManager = FindAnyObjectByType<ObjectManager>();
+        gameManager = FindAnyObjectByType<GameManager>();
         enemyDetection = FindAnyObjectByType<EnemyDetection>();
         timer = 0f;
         currentHealth = health;
         healthBar.maxValue = health;
         healthBar.value = currentHealth;
+        gameObject.SetActive(true);
     }
 
     void Update()
@@ -77,7 +80,9 @@ public class PlayerController : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject playerBullet = manager.GetObject(ObjectManager.ObjectType.PlayerBullet);
+        if (gameManager.isPaused) return;
+
+        GameObject playerBullet = objManager.GetObject(ObjectManager.ObjectType.PlayerBullet);
         playerBullet.transform.position = bulletSpawn.transform.position;
         
         Rigidbody2D playerBulletRb = playerBullet.GetComponent<Rigidbody2D>();
