@@ -135,8 +135,10 @@ MonoBehaviour:
   turnSpeed: 8
   bulletSpawn: {fileID: 6066769989580551655}
   animator: {fileID: 4821816650851181950}
+  explosionPrefab: {fileID: 9011270944239185469, guid: acdb854c7216d0b459808b25a4347cd2, type: 3}
   shotTimerRange: {x: 1, y: 3}
   offscreenMargin: 1
+  health: 2
 --- !u!1 &3333943615348622309
 GameObject:
   m_ObjectHideFlags: 0

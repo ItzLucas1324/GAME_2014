@@ -5,6 +5,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float moveSpeed = 3.0f, swingLength, swingSpeed, shotSpeed = 4.0f, turnSpeed = 8.0f;
     [SerializeField] private Transform bulletSpawn;
     [SerializeField] private Animator animator;
+    [SerializeField] private GameObject explosionPrefab;
     [SerializeField] Vector2 shotTimerRange = new Vector2(1, 3);
     [SerializeField] private float offscreenMargin = 1f;
     [SerializeField] private int health = 2;
@@ -12,7 +13,8 @@ public class EnemyController : MonoBehaviour
     private float timer, shotTimer, bottomBound, turnInput, turn;
     Rigidbody2D rb;
     private bool canSwing;
-    ObjectManager manager;
+    ObjectManager objManager;
+    GameManager gameManager;
     EnemySpawner spawner;
     Camera cam;
 
@@ -20,8 +22,8 @@ public class EnemyController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        manager = FindAnyObjectByType<ObjectManager>();
-
+        objManager = FindAnyObjectByType<ObjectManager>();
+        gameManager = FindAnyObjectByType<GameManager>();
         spawner = FindAnyObjectByType<EnemySpawner>();
 
         cam = Camera.main;
@@ -51,7 +53,8 @@ public class EnemyController : MonoBehaviour
     {
         if (transform.position.y <= bottomBound)
         {
-            manager.ReturnObject(ObjectManager.ObjectType.Enemy, gameObject);
+            objManager.ReturnObject(ObjectManager.ObjectType.Enemy, gameObject);
+            gameManager.SetScore(-1);
             spawner.currentEnemyCount--;
             return;
         }
@@ -86,9 +89,9 @@ public class EnemyController : MonoBehaviour
 
     private void Shoot()
     {
-        if (manager != null)
+        if (objManager != null)
         {
-            GameObject enemyBullet = manager.GetObject(ObjectManager.ObjectType.EnemyBullet);
+            GameObject enemyBullet = objManager.GetObject(ObjectManager.ObjectType.EnemyBullet);
             enemyBullet.transform.position = bulletSpawn.transform.position;
             enemyBullet.transform.rotation = Quaternion.Euler(0f, 0f, 180f);
 
@@ -105,9 +108,14 @@ public class EnemyController : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            manager.ReturnObject(ObjectManager.ObjectType.Enemy, gameObject);
+            objManager.ReturnObject(ObjectManager.ObjectType.Enemy, gameObject);
+
+            float randomRotation = Random.Range(0f, 360f);
+            GameObject explosionInst = Instantiate(explosionPrefab, transform.position, Quaternion.Euler(0f, 0f, randomRotation));
+            Destroy(explosionInst, 0.55f);
+
             spawner.currentEnemyCount--;
-            // increase score
+            gameManager.SetScore(2);
         }
     }
 }

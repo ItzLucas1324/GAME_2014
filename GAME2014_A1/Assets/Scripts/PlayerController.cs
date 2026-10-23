@@ -5,10 +5,12 @@ using Terresquall;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Transform topBound, bottomBound, bulletSpawn;
+    [SerializeField] private GameObject playerExplosionPrefab;
     [SerializeField] private Animator animator;
     [SerializeField] private Slider healthBar;
     [SerializeField] private float turnSpeed = 4.0f, shotSpeed = 3f, shotTimer = 1f, moveSpeed = 2.0f;
     [SerializeField] private int health = 10;
+    [System.NonSerialized] public bool isPlayerAlive = true;
     private int currentHealth;
     ObjectManager manager;
     EnemyDetection enemyDetection;
@@ -91,8 +93,10 @@ public class PlayerController : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            isPlayerAlive = false;
             gameObject.SetActive(false);
-            Debug.Log("You got fricked");
+            GameObject playerExplosionInst = Instantiate(playerExplosionPrefab, transform.position, Quaternion.identity);
+            Destroy(playerExplosionInst, 0.5f);
         }
     }
 }
