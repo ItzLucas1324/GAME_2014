@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Slider healthBar;
     [SerializeField] private float turnSpeed = 4.0f, shotSpeed = 3f, shotTimer = 1f, moveSpeed = 2.0f;
     [SerializeField] private int health = 10, shieldHealth = 3;
+    [SerializeField] Image[] shieldHealthIcons;
     [System.NonSerialized] public bool isPlayerAlive = true;
     private int currentHealth, currentShieldHealth;
     ObjectManager objManager;
@@ -100,11 +101,15 @@ public class PlayerController : MonoBehaviour
         {
             currentShieldHealth--;
 
+            if (currentShieldHealth >= 0 && currentShieldHealth < shieldHealthIcons.Length)
+            {
+                shieldHealthIcons[currentShieldHealth].gameObject.SetActive(false);
+            }
+
             if (currentShieldHealth <= 0)
             {
                 shieldActive = false;
                 shieldPrefab.SetActive(false);
-                currentShieldHealth = shieldHealth;
             }
 
             return;
@@ -127,7 +132,13 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Shield"))
         {
             shieldActive = true;
+            currentShieldHealth = shieldHealth;
             shieldPrefab.SetActive(true);
+            for (int i = 0; i < shieldHealthIcons.Length; i++)
+            {
+                shieldHealthIcons[i].gameObject.SetActive(true);
+            }
+
             Destroy(collision.gameObject);
             gameManager.randomPickup = null;
         }
