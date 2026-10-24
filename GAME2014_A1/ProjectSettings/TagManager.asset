@@ -6,6 +6,9 @@ TagManager:
   tags:
   - EnemyBullet
   - Enemy
+  - Shield
+  - RapidFire
+  - Health
   layers:
   - Default
   - TransparentFX

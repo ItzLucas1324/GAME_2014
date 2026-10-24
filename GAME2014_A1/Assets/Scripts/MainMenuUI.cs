@@ -15,7 +15,7 @@ public class MainMenuUI : MonoBehaviour
     {
         isHelpMenuOpen = !isHelpMenuOpen;
 
-        mainMenuUI.SetActive(isHelpMenuOpen);
-        helpMenuUI.SetActive(!isHelpMenuOpen);
+        mainMenuUI.SetActive(!isHelpMenuOpen);
+        helpMenuUI.SetActive(isHelpMenuOpen);
     }
 }

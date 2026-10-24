@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ObjectManager : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyPrefab, enemyBulletPrefab, playerBulletPrefab;
+    [SerializeField] private GameObject enemyPrefab, enemyBulletPrefab, playerBulletPrefab, shieldPrefab, rapidFirePrefab, healthPrefab;
     private Queue<GameObject> enemyBulletPool = new Queue<GameObject>();
     private Queue<GameObject> playerBulletPool = new Queue<GameObject>();
     private Queue<GameObject> enemyPool = new Queue<GameObject>();
@@ -12,7 +12,10 @@ public class ObjectManager : MonoBehaviour
     {
         PlayerBullet,
         EnemyBullet,
-        Enemy
+        Enemy,
+        ShieldPickup,
+        RapidFirePickup,
+        HealthPickup
     }
 
     public GameObject GetObject(ObjectType type)
@@ -59,7 +62,7 @@ public class ObjectManager : MonoBehaviour
         }
     }
 
-    private GameObject ObjectFactory(ObjectType objectToMake)
+    public GameObject ObjectFactory(ObjectType objectToMake)
     {
         GameObject prefab = null;
 
@@ -73,6 +76,15 @@ public class ObjectManager : MonoBehaviour
                 break;
             case ObjectType.Enemy:
                 prefab = enemyPrefab;
+                break;
+            case ObjectType.ShieldPickup:
+                prefab = shieldPrefab;
+                break;
+            case ObjectType.RapidFirePickup:
+                prefab = rapidFirePrefab;
+                break;
+            case ObjectType.HealthPickup:
+                prefab = healthPrefab;
                 break;
         }
 

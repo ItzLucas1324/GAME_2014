@@ -1,17 +1,18 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Terresquall;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Transform topBound, bottomBound, bulletSpawn;
-    [SerializeField] private GameObject playerExplosionPrefab;
+    [SerializeField] private GameObject playerExplosionPrefab, shieldPrefab;
     [SerializeField] private Animator animator;
     [SerializeField] private Slider healthBar;
     [SerializeField] private float turnSpeed = 4.0f, shotSpeed = 3f, shotTimer = 1f, moveSpeed = 2.0f;
-    [SerializeField] private int health = 10;
+    [SerializeField] private int health = 10, shieldHealth = 3;
     [System.NonSerialized] public bool isPlayerAlive = true;
-    private int currentHealth;
+    private int currentHealth, currentShieldHealth;
     ObjectManager objManager;
     GameManager gameManager;
     EnemyDetection enemyDetection;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     private Camera cam;
     private float halfWidth, turn;
+    private bool shieldActive = false;
     [System.NonSerialized] public float timer;
 
     private void Awake()
@@ -31,6 +33,7 @@ public class PlayerController : MonoBehaviour
         enemyDetection = FindAnyObjectByType<EnemyDetection>();
         timer = 0f;
         currentHealth = health;
+        currentShieldHealth = shieldHealth;
         healthBar.maxValue = health;
         healthBar.value = currentHealth;
         gameObject.SetActive(true);
@@ -93,6 +96,20 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (shieldActive)
+        {
+            currentShieldHealth--;
+
+            if (currentShieldHealth <= 0)
+            {
+                shieldActive = false;
+                shieldPrefab.SetActive(false);
+                currentShieldHealth = shieldHealth;
+            }
+
+            return;
+        }   
+
         currentHealth -= damage;
         healthBar.value = currentHealth;
 
@@ -103,5 +120,39 @@ public class PlayerController : MonoBehaviour
             GameObject playerExplosionInst = Instantiate(playerExplosionPrefab, transform.position, Quaternion.identity);
             Destroy(playerExplosionInst, 0.5f);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Shield"))
+        {
+            shieldActive = true;
+            shieldPrefab.SetActive(true);
+            Destroy(collision.gameObject);
+            gameManager.randomPickup = null;
+        }
+        if (collision.CompareTag("RapidFire"))
+        {
+            Destroy(collision.gameObject);
+            StartCoroutine(RapidFire());
+            gameManager.randomPickup = null;
+        }
+        if (collision.CompareTag("Health"))
+        {
+            currentHealth += 2;
+            if (currentHealth > health) currentHealth = health;
+            healthBar.value = currentHealth;
+            Destroy(collision.gameObject);
+            gameManager.randomPickup = null;
+        }
+    }
+
+    IEnumerator RapidFire()
+    {
+        shotTimer = shotTimer / 2;
+
+        yield return new WaitForSeconds(10.0f);
+
+        shotTimer = shotTimer * 2;
     }
 }
