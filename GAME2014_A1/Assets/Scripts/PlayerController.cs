@@ -121,6 +121,7 @@ public class PlayerController : MonoBehaviour
         if (currentHealth <= 0)
         {
             isPlayerAlive = false;
+            gameManager.TriggerGameOver();
             gameObject.SetActive(false);
             GameObject playerExplosionInst = Instantiate(playerExplosionPrefab, transform.position, Quaternion.identity);
             Destroy(playerExplosionInst, 0.5f);

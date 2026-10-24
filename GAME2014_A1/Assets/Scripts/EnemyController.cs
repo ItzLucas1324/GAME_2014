@@ -59,11 +59,14 @@ public class EnemyController : MonoBehaviour
             return;
         }
 
-        shotTimer -= Time.fixedDeltaTime;
-
-        if (shotTimer <= 0)
+        if (!gameManager.isGameOver)
         {
-            Shoot();
+            shotTimer -= Time.fixedDeltaTime;
+
+            if (shotTimer <= 0)
+            {
+                Shoot();
+            }
         }
 
         float x = 0f;

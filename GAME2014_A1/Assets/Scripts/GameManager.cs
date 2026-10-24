@@ -2,30 +2,35 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private Button pauseButton;
-    [SerializeField] private GameObject gameUI, pauseMenuUI, pauseButtonParent;
+    [SerializeField] private GameObject gameUI, pauseMenuUI, gameOverUI, pauseButtonParent;
     [SerializeField] private float offscreenMargin = 1f, pickupDropSpeed;
     [SerializeField] private Vector2 pickupSpawnTimes = new Vector2(5f, 10f);
-    [System.NonSerialized] public int score;
-    [System.NonSerialized] public bool isPaused;
+    [System.NonSerialized] public int score, finalScore;
+    [System.NonSerialized] public bool isPaused, isGameOver;
+    [System.NonSerialized] public GameObject randomPickup = null;
     private float topBound, bottomBound, leftBound, rightBound, timer;
-    public GameObject randomPickup = null;
+    public TextMeshProUGUI finalScoreTextValue;
     PlayerController playerController;
     ObjectManager objManager;
     Camera cam;
 
     void Start()
     {
+        Time.timeScale = 1;
         playerController = FindAnyObjectByType<PlayerController>();
         objManager = FindAnyObjectByType<ObjectManager>();
 
         gameUI.SetActive(true);
         pauseMenuUI.SetActive(false);
+        gameOverUI.SetActive(false);
         isPaused = false;
+        isGameOver = false;
 
         cam = Camera.main;
         topBound = cam.ViewportToWorldPoint(new Vector3(0f, 1f, 0f)).y + offscreenMargin;
@@ -104,6 +109,22 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
         PauseGame();
+    }
+
+    public void TriggerGameOver()
+    {
+        StartCoroutine(GameOver());
+    }
+
+    private IEnumerator GameOver()
+    {
+        finalScore = score;
+        finalScoreTextValue.text = finalScore.ToString();
+        gameUI.SetActive(false);
+        yield return new WaitForSeconds(1.5f);
+
+        gameOverUI.SetActive(true);
+        isGameOver = true;
     }
 
     private void SpawnPickups()
