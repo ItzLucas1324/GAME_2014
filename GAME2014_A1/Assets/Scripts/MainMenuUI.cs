@@ -1,16 +1,25 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MainMenuUI : MonoBehaviour
 {
-    [SerializeField] private GameObject mainMenuUI, helpMenuUI;
+    [SerializeField] private GameObject mainMenuUI, helpMenuUI, settingsMenuUI;
     [SerializeField] private TextMeshProUGUI highScoreText;
-    private bool isHelpMenuOpen = false;
+    [SerializeField] private Slider masterSlider, sfxSlider, musicSlider;
+    private bool isHelpMenuOpen = false, isSettingsMenuOpen = false;
 
     private void Start()
     {
         UpdateHighScoreText();
+
+        if (SoundManager.Instance != null)
+        {
+            masterSlider.value = SoundManager.Instance.MasterVolume;
+            sfxSlider.value = SoundManager.Instance.SfxVolume;
+            musicSlider.value = SoundManager.Instance.MusicVolume;
+        }
     }
 
     public void StartGame()
@@ -38,14 +47,44 @@ public class MainMenuUI : MonoBehaviour
         helpMenuUI.SetActive(isHelpMenuOpen);
     }
 
+    public void SettingsMenu()
+    {
+        isSettingsMenuOpen = !isSettingsMenuOpen;
+
+        mainMenuUI.SetActive(!isSettingsMenuOpen);
+        settingsMenuUI.SetActive(isSettingsMenuOpen);
+    }
+
     public void ResetHighScore()
     {
-        HighScoreTracker hsTracker = FindAnyObjectByType<HighScoreTracker>();
-
-        if (hsTracker != null)
+        if (HighScoreTracker.Instance != null)
         {
-            hsTracker.ResetHighScore();
+            HighScoreTracker.Instance.ResetHighScore();
             UpdateHighScoreText();
+        }
+    }
+
+    public void OnMasterChanged(float value)
+    {
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.SetVolumeMaster(value);
+        }
+    }
+
+    public void OnSfxChanged(float value)
+    {
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.SetVolumeSFX(value);
+        }
+    }
+
+    public void OnMusicChanged(float value)
+    {
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.SetVolumeMusic(value);
         }
     }
 }
