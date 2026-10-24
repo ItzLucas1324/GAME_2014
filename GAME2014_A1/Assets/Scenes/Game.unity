@@ -372,7 +372,7 @@ MonoBehaviour:
   gameOverUI: {fileID: 311377788}
   pauseButtonParent: {fileID: 492650402}
   offscreenMargin: 1
-  pickupDropSpeed: 2
+  pickupDropSpeed: 1
   pickupSpawnTimes: {x: 5, y: 10}
   finalScoreTextValue: {fileID: 267869349}
 --- !u!1 &169012993

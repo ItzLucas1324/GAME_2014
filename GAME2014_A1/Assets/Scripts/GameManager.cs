@@ -121,6 +121,12 @@ public class GameManager : MonoBehaviour
         finalScore = score;
         finalScoreTextValue.text = finalScore.ToString();
         gameUI.SetActive(false);
+
+        if (HighScoreTracker.Instance != null)
+            HighScoreTracker.Instance.SubmitScore(finalScore);
+        else
+            Debug.LogWarning("No HighScoreTracker found!");
+
         yield return new WaitForSeconds(1.5f);
 
         gameOverUI.SetActive(true);
