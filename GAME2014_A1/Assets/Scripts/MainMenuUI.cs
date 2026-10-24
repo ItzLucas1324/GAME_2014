@@ -14,12 +14,19 @@ public class MainMenuUI : MonoBehaviour
     {
         UpdateHighScoreText();
 
-        if (SoundManager.Instance != null)
+        if (SoundManager.Instance == null)
         {
-            masterSlider.value = SoundManager.Instance.MasterVolume;
-            sfxSlider.value = SoundManager.Instance.SfxVolume;
-            musicSlider.value = SoundManager.Instance.MusicVolume;
+            Debug.LogWarning("Can't find SoundManager!");
+            return;
         }
+
+        masterSlider.SetValueWithoutNotify(SoundManager.Instance.MasterVolume);
+        sfxSlider.SetValueWithoutNotify(SoundManager.Instance.SfxVolume);
+        musicSlider.SetValueWithoutNotify(SoundManager.Instance.MusicVolume);
+
+        masterSlider.onValueChanged.AddListener(OnMasterChanged);
+        sfxSlider.onValueChanged.AddListener(OnSfxChanged);
+        musicSlider.onValueChanged.AddListener(OnMusicChanged);
     }
 
     public void StartGame()
