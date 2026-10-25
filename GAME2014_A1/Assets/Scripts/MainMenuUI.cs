@@ -20,6 +20,14 @@ public class MainMenuUI : MonoBehaviour
             return;
         }
 
+        if (SoundManager.Instance == null)
+        {
+            Debug.LogWarning("Can't find SoundManager!");
+            return;
+        }
+
+        SoundManager.Instance.PlayMusicWithIntro("unchained_destiny_opening", "unchained_destiny_loop");
+
         masterSlider.SetValueWithoutNotify(SoundManager.Instance.MasterVolume);
         sfxSlider.SetValueWithoutNotify(SoundManager.Instance.SfxVolume);
         musicSlider.SetValueWithoutNotify(SoundManager.Instance.MusicVolume);

@@ -13,6 +13,7 @@ public class SoundManager : MonoBehaviour
 
     private AudioSource sfxSource;
     private AudioSource musicSource;
+    private AudioSource musicLoopSource;
 
     private float sfxVolume = 1f;
     private float musicVolume = 1f;
@@ -40,10 +41,13 @@ public class SoundManager : MonoBehaviour
     {
         sfxSource = gameObject.AddComponent<AudioSource>();
         musicSource = gameObject.AddComponent<AudioSource>();
+        musicLoopSource = gameObject.AddComponent<AudioSource>();
 
         sfxSource.playOnAwake = false;
         musicSource.playOnAwake = false;
         musicSource.loop = true;
+        musicLoopSource.playOnAwake = false;
+        musicLoopSource.loop = true;
 
         foreach (AudioClip clip in sfxClips)
         {
@@ -90,6 +94,29 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    public void PlayMusicWithIntro(string introKey, string loopKey)
+    {
+        if (!musicDictionary.TryGetValue(introKey, out AudioClip intro) ||
+            !musicDictionary.TryGetValue(loopKey, out AudioClip loop))
+        {
+            Debug.LogError("Intro or loop key not found in Music Dictionary.");
+            return;
+        }
+
+        StopMusic();
+
+        double startTime = AudioSettings.dspTime + 0.1;
+        double introLength = (double)intro.samples / intro.frequency;
+
+        musicSource.clip = intro;
+        musicSource.loop = false;
+        musicSource.PlayScheduled(startTime);
+
+        musicLoopSource.clip = loop;
+        musicLoopSource.loop = true;
+        musicLoopSource.PlayScheduled(startTime + introLength);
+    }
+
     public void SetVolumeSFX(float volume)
     {
         sfxVolume = volume;
@@ -112,5 +139,6 @@ public class SoundManager : MonoBehaviour
     public void StopMusic()
     {
         musicSource.Stop();
+        musicLoopSource.Stop();
     }
 }

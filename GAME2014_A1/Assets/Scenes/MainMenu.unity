@@ -5749,7 +5749,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
   sfxClips: []
-  musicClips: []
+  musicClips:
+  - {fileID: 8300000, guid: dab7b1de9e681ab48b004e9176bd5538, type: 3}
+  - {fileID: 8300000, guid: 7aba76839b313554aaac71be16e6ce17, type: 3}
+  - {fileID: 8300000, guid: df33b4581f57566408c929d24aa23f27, type: 3}
 --- !u!1 &1972476677
 GameObject:
   m_ObjectHideFlags: 0
