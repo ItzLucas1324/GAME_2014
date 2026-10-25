@@ -32,6 +32,12 @@ public class GameManager : MonoBehaviour
         isPaused = false;
         isGameOver = false;
 
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.StopMusic();
+            SoundManager.Instance.PlayMusic("The Evil Sacrifice Archenemies");
+        }
+
         cam = Camera.main;
         topBound = cam.ViewportToWorldPoint(new Vector3(0f, 1f, 0f)).y + offscreenMargin;
         bottomBound = cam.ViewportToWorldPoint(new Vector3(0f, 0f, 0f)).y - offscreenMargin;
@@ -102,11 +108,14 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene("Game");
-        PauseGame();
+
+        if (isPaused)
+            PauseGame();
     }
 
     public void QuitGame()
     {
+        SoundManager.Instance.StopMusic();
         SceneManager.LoadScene("MainMenu");
         PauseGame();
     }
@@ -118,6 +127,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator GameOver()
     {
+        SoundManager.Instance.StopMusic();
         finalScore = score;
         finalScoreTextValue.text = finalScore.ToString();
         gameUI.SetActive(false);
