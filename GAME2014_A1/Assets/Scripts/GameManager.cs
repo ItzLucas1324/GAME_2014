@@ -8,11 +8,11 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private Button pauseButton;
-    [SerializeField] private GameObject gameUI, pauseMenuUI, gameOverUI, pauseButtonParent;
+    [SerializeField] private GameObject gameUI, pauseMenuUI, settingsMenuUI, gameOverUI, pauseButtonParent;
     [SerializeField] private float offscreenMargin = 1f, pickupDropSpeed;
     [SerializeField] private Vector2 pickupSpawnTimes = new Vector2(5f, 10f);
     [System.NonSerialized] public int score, finalScore;
-    [System.NonSerialized] public bool isPaused, isGameOver;
+    [System.NonSerialized] public bool isPaused, isGameOver, isSettingsOpen;
     [System.NonSerialized] public GameObject randomPickup = null;
     private float topBound, bottomBound, leftBound, rightBound, timer;
     public TextMeshProUGUI finalScoreTextValue;
@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
         gameOverUI.SetActive(false);
         isPaused = false;
         isGameOver = false;
+        isSettingsOpen = false;
 
         if (SoundManager.Instance != null)
         {
@@ -105,8 +106,19 @@ public class GameManager : MonoBehaviour
         pauseMenuUI.SetActive(isPaused);
     }
 
+    public void SettingsMenu()
+    {
+        isSettingsOpen = !isSettingsOpen;
+
+        pauseMenuUI.SetActive(!isSettingsOpen);
+        settingsMenuUI.SetActive(isSettingsOpen);
+    }
+
     public void RestartGame()
     {
+        if (SoundManager.Instance != null)
+            SoundManager.Instance.StopMusic();
+
         SceneManager.LoadScene("Game");
 
         if (isPaused)
@@ -141,6 +153,8 @@ public class GameManager : MonoBehaviour
 
         gameOverUI.SetActive(true);
         isGameOver = true;
+        if (SoundManager.Instance != null)
+            SoundManager.Instance.PlayMusic("Flaming Soul");
     }
 
     private void SpawnPickups()

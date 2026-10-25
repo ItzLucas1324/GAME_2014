@@ -5748,11 +5748,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436faa0f58250184d8ba82ff497995e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
-  sfxClips: []
+  sfxClips:
+  - clip: {fileID: 8300000, guid: c0b3e2defdfcc7e44b5e80b1ac026d4a, type: 3}
+    volume: 0.4
+  - clip: {fileID: 8300000, guid: 9287a05bafd1ef3409c2a3cebb83e5c2, type: 3}
+    volume: 0.3
+  - clip: {fileID: 8300000, guid: 0fe95d43b2f9b524cae0bf6fe120452e, type: 3}
+    volume: 0.5
+  - clip: {fileID: 8300000, guid: 0dd7f955cb42b17409f8a3457f05ab37, type: 3}
+    volume: 0.6
+  - clip: {fileID: 8300000, guid: 7a75f7a8a269b6746b3e7184625d3883, type: 3}
+    volume: 1
+  - clip: {fileID: 8300000, guid: 98cc7a58d80469548be37d232e8ff299, type: 3}
+    volume: 0.8
+  - clip: {fileID: 8300000, guid: c1ac66b16314de24dbb0611ed8fb833a, type: 3}
+    volume: 1
+  - clip: {fileID: 8300000, guid: 44ac506362fa19d4e9827d177404806e, type: 3}
+    volume: 1
+  - clip: {fileID: 8300000, guid: ed0de1caaa431ad4dbb7fa85b3f55970, type: 3}
+    volume: 0.8
+  - clip: {fileID: 8300000, guid: be6196435d35664418f0857ced399585, type: 3}
+    volume: 1
+  - clip: {fileID: 8300000, guid: 45ad9f4fea634ff48ada71f8d8bbc632, type: 3}
+    volume: 1
+  - clip: {fileID: 8300000, guid: a051d5dd06558264f8140191e2350943, type: 3}
+    volume: 1
   musicClips:
-  - {fileID: 8300000, guid: dab7b1de9e681ab48b004e9176bd5538, type: 3}
-  - {fileID: 8300000, guid: 7aba76839b313554aaac71be16e6ce17, type: 3}
-  - {fileID: 8300000, guid: df33b4581f57566408c929d24aa23f27, type: 3}
+  - clip: {fileID: 8300000, guid: dab7b1de9e681ab48b004e9176bd5538, type: 3}
+    volume: 0.4
+  - clip: {fileID: 8300000, guid: 7aba76839b313554aaac71be16e6ce17, type: 3}
+    volume: 0.4
+  - clip: {fileID: 8300000, guid: df33b4581f57566408c929d24aa23f27, type: 3}
+    volume: 0.4
+  - clip: {fileID: 8300000, guid: b92258dc52ab1a94683af6465b175bb4, type: 3}
+    volume: 0.4
 --- !u!1 &1972476677
 GameObject:
   m_ObjectHideFlags: 0

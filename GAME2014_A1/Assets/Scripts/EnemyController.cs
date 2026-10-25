@@ -56,6 +56,13 @@ public class EnemyController : MonoBehaviour
             objManager.ReturnObject(ObjectManager.ObjectType.Enemy, gameObject);
             gameManager.SetScore(-1);
             spawner.currentEnemyCount--;
+
+            if (!gameManager.isGameOver)
+            {
+                if (SoundManager.Instance != null)
+                    SoundManager.Instance.PlaySound("LosePoints");
+            }
+
             return;
         }
 
@@ -101,6 +108,9 @@ public class EnemyController : MonoBehaviour
             Rigidbody2D enemyRb = enemyBullet.GetComponent<Rigidbody2D>();
             enemyRb.linearVelocity = new Vector2(0f, -shotSpeed);
 
+            if (SoundManager.Instance != null)
+                SoundManager.Instance.PlaySound("iceball");
+
             shotTimer = Random.Range(shotTimerRange.x, shotTimerRange.y);
         }
     }
@@ -113,12 +123,20 @@ public class EnemyController : MonoBehaviour
         {
             objManager.ReturnObject(ObjectManager.ObjectType.Enemy, gameObject);
 
+            if (SoundManager.Instance != null)
+                SoundManager.Instance.PlaySound("explode");
+
             float randomRotation = Random.Range(0f, 360f);
             GameObject explosionInst = Instantiate(explosionPrefab, transform.position, Quaternion.Euler(0f, 0f, randomRotation));
             Destroy(explosionInst, 0.55f);
 
             spawner.currentEnemyCount--;
             gameManager.SetScore(2);
+        }
+        else
+        {
+            if (SoundManager.Instance != null)
+                SoundManager.Instance.PlaySound("black_ops_2_headshot", true);
         }
     }
 }
