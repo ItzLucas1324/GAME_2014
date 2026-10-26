@@ -1625,7 +1625,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 591.68005}
+  m_AnchoredPosition: {x: 0, y: 629}
   m_SizeDelta: {x: 603, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &585560342
@@ -1909,8 +1909,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 103.32092}
-  m_SizeDelta: {x: 603, y: 608.7181}
+  m_AnchoredPosition: {x: 0, y: 159}
+  m_SizeDelta: {x: 603, y: 681.1352}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &635754843
 MonoBehaviour:
@@ -1935,7 +1935,10 @@ MonoBehaviour:
   m_text: 'Your goal is to survive the onslaught of enemies for as long as you can.
 
 
-    Shoot down your foes and dodge their attacks by flying your jet around with the joystick on screen. '
+    Shoot down your foes and dodge their attacks by flying your jet around with the joystick on screen.
+
+
+    If enemies survive you will lose points! '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 66b0464c88d7e6b4cbf347b78946c5fc, type: 2}
   m_sharedMaterial: {fileID: -4708769656904905012, guid: 66b0464c88d7e6b4cbf347b78946c5fc, type: 2}
@@ -1962,8 +1965,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 47
+  m_fontSizeBase: 47
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
