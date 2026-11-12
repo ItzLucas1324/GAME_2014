@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -157,12 +157,12 @@ TextureImporter:
       name: Autumn_Forest_2D_Platformer_Tileset_Platformer - Bonus_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 2
-        width: 120
-        height: 124
+        x: 6
+        y: 4
+        width: 116
+        height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -179,7 +179,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e90a20e6d470e054eb639faf12e6a5d8
     internalID: 0
     vertices: []
     indices: 

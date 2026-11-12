@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         float moveX = VirtualJoystick.GetAxisRaw("Horizontal", 1);
-        movement = new Vector2(moveX, 0.0f);
 
         if (moveX != 0)
         {
@@ -39,6 +38,16 @@ public class PlayerController : MonoBehaviour
         {
             an.SetBool("IsWalking", false);
         }
+
+        // PC testing controls
+        if (Input.GetKey(KeyCode.A))
+            moveX = -1.0f;
+        if (Input.GetKey(KeyCode.D))
+            moveX = 1.0f;
+        if (Input.GetKeyDown(KeyCode.Space)) 
+            Jump();
+
+        movement = new Vector2(moveX, 0.0f);
     }
 
     public void Jump()
@@ -66,7 +75,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") && collision.GetContact(0).normal.y > 0.8f)
         {
             jumpCounter = 0;
             an.SetBool("IsJumping", false);
