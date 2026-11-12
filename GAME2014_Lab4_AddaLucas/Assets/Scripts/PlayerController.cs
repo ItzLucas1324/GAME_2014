@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     private int maxJumps = 2, jumpCounter = 0;
     private Vector2 movement;
     private bool jumpPressed = false;
+    private Vector3 spawnPoint;
     Rigidbody2D rb;
     Animator an;
 
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         an = GetComponent<Animator>();
+        spawnPoint = transform.position;
     }
 
     
@@ -48,6 +50,11 @@ public class PlayerController : MonoBehaviour
             Jump();
 
         movement = new Vector2(moveX, 0.0f);
+
+        if (transform.position.y < -10.0f)
+        {
+            transform.position = spawnPoint;
+        }
     }
 
     public void Jump()
@@ -79,6 +86,15 @@ public class PlayerController : MonoBehaviour
         {
             jumpCounter = 0;
             an.SetBool("IsJumping", false);
+            an.SetBool("IsGrounded", true);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            an.SetBool("IsGrounded", false);
         }
     }
 }
