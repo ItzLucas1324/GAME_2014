@@ -1,0 +1,3343 @@
+fileFormatVersion: 2
+guid: a0139c5a1f487074a82e9390a44365d2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2333730117565867513
+    second: clone_sprites_0
+  - first:
+      213: -6219908465321918838
+    second: clone_sprites_1
+  - first:
+      213: -5640467717324045851
+    second: clone_sprites_2
+  - first:
+      213: -626386894720416226
+    second: clone_sprites_3
+  - first:
+      213: 4087511403913682450
+    second: clone_sprites_4
+  - first:
+      213: -1351274171880776386
+    second: clone_sprites_5
+  - first:
+      213: 2498540132814704021
+    second: clone_sprites_6
+  - first:
+      213: -3936585680567594788
+    second: clone_sprites_7
+  - first:
+      213: -1600822221574030052
+    second: clone_sprites_8
+  - first:
+      213: 1667827789863267363
+    second: clone_sprites_9
+  - first:
+      213: 1816524626923351931
+    second: clone_sprites_10
+  - first:
+      213: -6049568039480901811
+    second: clone_sprites_11
+  - first:
+      213: -1214749496962623992
+    second: clone_sprites_12
+  - first:
+      213: -7203280850346518183
+    second: clone_sprites_13
+  - first:
+      213: -2439784520267154383
+    second: clone_sprites_14
+  - first:
+      213: -8220387125154931941
+    second: clone_sprites_15
+  - first:
+      213: 2153000614353753987
+    second: clone_sprites_16
+  - first:
+      213: -6997731285383372
+    second: clone_sprites_17
+  - first:
+      213: -4142732070668639881
+    second: clone_sprites_18
+  - first:
+      213: 3071915375650445156
+    second: clone_sprites_19
+  - first:
+      213: 7010527808188487583
+    second: clone_sprites_20
+  - first:
+      213: -929681634985356254
+    second: clone_sprites_21
+  - first:
+      213: 7136356182285029261
+    second: clone_sprites_22
+  - first:
+      213: 5903865788340888598
+    second: clone_sprites_23
+  - first:
+      213: -8430500597813702116
+    second: clone_sprites_24
+  - first:
+      213: 329755590168916331
+    second: clone_sprites_25
+  - first:
+      213: -3465605030635550174
+    second: clone_sprites_26
+  - first:
+      213: 6614800909361626503
+    second: clone_sprites_27
+  - first:
+      213: -7282544426915421196
+    second: clone_sprites_28
+  - first:
+      213: 4487188612428203578
+    second: clone_sprites_29
+  - first:
+      213: -6350976261530111179
+    second: clone_sprites_30
+  - first:
+      213: 3040268803179507113
+    second: clone_sprites_31
+  - first:
+      213: 3548583817790801487
+    second: clone_sprites_32
+  - first:
+      213: -5741694701398381323
+    second: clone_sprites_33
+  - first:
+      213: -3003748265655831526
+    second: clone_sprites_34
+  - first:
+      213: 348155193021792187
+    second: clone_sprites_35
+  - first:
+      213: 7607574704483768098
+    second: clone_sprites_36
+  - first:
+      213: -8741181043108055140
+    second: clone_sprites_37
+  - first:
+      213: 338678658848382143
+    second: clone_sprites_38
+  - first:
+      213: 8290110894319643128
+    second: clone_sprites_39
+  - first:
+      213: 2787097702633497415
+    second: clone_sprites_40
+  - first:
+      213: -1793384886197647408
+    second: clone_sprites_41
+  - first:
+      213: 7708283044109465906
+    second: clone_sprites_42
+  - first:
+      213: -8626598199424356530
+    second: clone_sprites_43
+  - first:
+      213: -142605185902894450
+    second: clone_sprites_44
+  - first:
+      213: 3329482186513362161
+    second: clone_sprites_45
+  - first:
+      213: -8268258204130959681
+    second: clone_sprites_46
+  - first:
+      213: 3656068509172695373
+    second: clone_sprites_47
+  - first:
+      213: 3400852901699372214
+    second: clone_sprites_48
+  - first:
+      213: 6077326928554565485
+    second: clone_sprites_49
+  - first:
+      213: 8897984797178876574
+    second: clone_sprites_50
+  - first:
+      213: 1399805785555978571
+    second: clone_sprites_51
+  - first:
+      213: 4053014468118879878
+    second: clone_sprites_52
+  - first:
+      213: 6420460390104502899
+    second: clone_sprites_53
+  - first:
+      213: -335781700450217691
+    second: clone_sprites_54
+  - first:
+      213: 3242335489369891306
+    second: clone_sprites_55
+  - first:
+      213: 167424649074004322
+    second: clone_sprites_56
+  - first:
+      213: -2541124699578759382
+    second: clone_sprites_57
+  - first:
+      213: 5446684970068471099
+    second: clone_sprites_58
+  - first:
+      213: 5621640017251175737
+    second: clone_sprites_59
+  - first:
+      213: -6651131315422635592
+    second: clone_sprites_60
+  - first:
+      213: -9115517809915804651
+    second: clone_sprites_61
+  - first:
+      213: -9153976029446988032
+    second: clone_sprites_62
+  - first:
+      213: 606773265675022241
+    second: clone_sprites_63
+  - first:
+      213: -7019700372132091783
+    second: clone_sprites_64
+  - first:
+      213: 4579810305267719576
+    second: clone_sprites_65
+  - first:
+      213: -8391264076102278473
+    second: clone_sprites_66
+  - first:
+      213: -1793164795619918217
+    second: clone_sprites_67
+  - first:
+      213: 2770971700157944529
+    second: clone_sprites_68
+  - first:
+      213: -3346074913257546269
+    second: clone_sprites_69
+  - first:
+      213: -5870725989084940586
+    second: clone_sprites_70
+  - first:
+      213: 1248251583239700023
+    second: clone_sprites_71
+  - first:
+      213: 3406071020002120042
+    second: clone_sprites_72
+  - first:
+      213: -7303663827677521523
+    second: clone_sprites_73
+  - first:
+      213: -2840137460955823988
+    second: clone_sprites_74
+  - first:
+      213: 7614343523212101775
+    second: clone_sprites_75
+  - first:
+      213: 7785138679746551633
+    second: clone_sprites_76
+  - first:
+      213: -5968815472364870025
+    second: clone_sprites_77
+  - first:
+      213: 6591469120667964549
+    second: clone_sprites_78
+  - first:
+      213: -3819916329358111391
+    second: clone_sprites_79
+  - first:
+      213: -9022737897576387959
+    second: clone_sprites_80
+  - first:
+      213: -5453011344806215505
+    second: clone_sprites_81
+  - first:
+      213: 2131084032686580229
+    second: clone_sprites_82
+  - first:
+      213: -7039802509125047576
+    second: clone_sprites_83
+  - first:
+      213: 1485947261676135265
+    second: clone_sprites_84
+  - first:
+      213: -3715722360665071870
+    second: clone_sprites_85
+  - first:
+      213: -4887551473257813090
+    second: clone_sprites_86
+  - first:
+      213: 4156046893629264428
+    second: clone_sprites_87
+  - first:
+      213: -4853359980066564234
+    second: clone_sprites_88
+  - first:
+      213: 3533233284574728902
+    second: clone_sprites_89
+  - first:
+      213: -2057685544638397371
+    second: clone_sprites_90
+  - first:
+      213: 2961916117270049767
+    second: clone_sprites_91
+  - first:
+      213: 8082508655262673147
+    second: clone_sprites_92
+  - first:
+      213: 5101836903331134443
+    second: clone_sprites_93
+  - first:
+      213: -2928642978372384577
+    second: clone_sprites_94
+  - first:
+      213: 1313823815294239690
+    second: clone_sprites_95
+  - first:
+      213: 6115165612346451921
+    second: clone_sprites_96
+  - first:
+      213: -16940735526454753
+    second: clone_sprites_97
+  - first:
+      213: -4188540979758240521
+    second: clone_sprites_98
+  - first:
+      213: -2433788438267685363
+    second: clone_sprites_99
+  - first:
+      213: 3169945329728126172
+    second: clone_sprites_100
+  - first:
+      213: 2192105662121795714
+    second: clone_sprites_101
+  - first:
+      213: -7056747126633365690
+    second: clone_sprites_102
+  - first:
+      213: -7198096919934267514
+    second: clone_sprites_103
+  - first:
+      213: 3384301383889587006
+    second: clone_sprites_104
+  - first:
+      213: 6065019073797279458
+    second: clone_sprites_105
+  - first:
+      213: 5821429677908686320
+    second: clone_sprites_106
+  - first:
+      213: 4626761242576062372
+    second: clone_sprites_107
+  - first:
+      213: 3762351345109524490
+    second: clone_sprites_108
+  - first:
+      213: 3094385123653947909
+    second: clone_sprites_109
+  - first:
+      213: -8416242282664971419
+    second: clone_sprites_110
+  - first:
+      213: -427203325571266940
+    second: clone_sprites_111
+  - first:
+      213: 4843392244826014397
+    second: clone_sprites_112
+  - first:
+      213: 7277854135371986559
+    second: clone_sprites_113
+  - first:
+      213: -9084938750600668699
+    second: clone_sprites_114
+  - first:
+      213: -150794640113532483
+    second: clone_sprites_115
+  - first:
+      213: -6976024070215150859
+    second: clone_sprites_116
+  - first:
+      213: -6770261879024116927
+    second: clone_sprites_117
+  - first:
+      213: 2772496776135086929
+    second: clone_sprites_118
+  - first:
+      213: 3412654063495808795
+    second: clone_sprites_119
+  - first:
+      213: 5173619959985760521
+    second: clone_sprites_120
+  - first:
+      213: -2771421242299604801
+    second: clone_sprites_121
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: clone_sprites_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 631
+        width: 43
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f5e4236d23136020800000000000000
+      internalID: 2333730117565867513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_1
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 631
+        width: 43
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8eba0d84327ea9a0800000000000000
+      internalID: -6219908465321918838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_2
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 571
+        width: 45
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e187ddde7809b1b0800000000000000
+      internalID: -5640467717324045851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 631
+        width: 53
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e16ca302070ae47f0800000000000000
+      internalID: -626386894720416226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_4
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 571
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21e12ad17f1c9b830800000000000000
+      internalID: 4087511403913682450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_5
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 631
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3dd2eecc4f4f3de0800000000000000
+      internalID: -1351274171880776386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_6
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 571
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d4a7153099ca220800000000000000
+      internalID: 2498540132814704021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_7
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 631
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd011e13e207e59c0800000000000000
+      internalID: -3936585680567594788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_8
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 631
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1d3786cbacb8c9e0800000000000000
+      internalID: -1600822221574030052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_9
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 631
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32c2351d980552710800000000000000
+      internalID: 1667827789863267363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_10
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 571
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7fe3891687953910800000000000000
+      internalID: 1816524626923351931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_11
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 631
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4f3f2a8bed9b0ca0800000000000000
+      internalID: -6049568039480901811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_12
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 571
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 806557eb4c7542fe0800000000000000
+      internalID: -1214749496962623992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_13
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 631
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 959d8b13b3ec80c90800000000000000
+      internalID: -7203280850346518183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_14
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 631
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13cbaf4c7e4242ed0800000000000000
+      internalID: -2439784520267154383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_15
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 631
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1b12f096715bed80800000000000000
+      internalID: -8220387125154931941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_16
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 571
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 387d0c3d6aef0ed10800000000000000
+      internalID: 2153000614353753987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_17
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 631
+        width: 53
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4374088b99327eff0800000000000000
+      internalID: -6997731285383372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_18
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 571
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7716d20812f0286c0800000000000000
+      internalID: -4142732070668639881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_19
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 571
+        width: 45
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46794b922c2a1aa20800000000000000
+      internalID: 3071915375650445156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_20
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 631
+        width: 43
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f97921fe5e56a4160800000000000000
+      internalID: 7010527808188487583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_21
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 631
+        width: 43
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2245e788a7b1913f0800000000000000
+      internalID: -929681634985356254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 511
+        width: 45
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8f03c3432e690360800000000000000
+      internalID: 7136356182285029261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_23
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 571
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 614e3ab87aebee150800000000000000
+      internalID: 5903865788340888598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_24
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 571
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c12989c7f58d00b80800000000000000
+      internalID: -8430500597813702116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_25
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 571
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b61b7be46f6839400800000000000000
+      internalID: 329755590168916331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_26
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 571
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22a49211692b7efc0800000000000000
+      internalID: -3465605030635550174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_27
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 511
+        width: 45
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d3e6e516e7ccb50800000000000000
+      internalID: 6614800909361626503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_28
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 511
+        width: 45
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f3a4b4ad643fea90800000000000000
+      internalID: -7282544426915421196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_29
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 448
+        width: 34
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3606f3d442b54e30800000000000000
+      internalID: 4487188612428203578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_30
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 511
+        width: 45
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5333f823dbcccd7a0800000000000000
+      internalID: -6350976261530111179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_31
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 511
+        width: 45
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ad67335e54313a20800000000000000
+      internalID: 3040268803179507113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_32
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 448
+        width: 34
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f46ce1b5e2a1f3130800000000000000
+      internalID: 3548583817790801487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_33
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 511
+        width: 45
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc286207176150b0800000000000000
+      internalID: -5741694701398381323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_34
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 383
+        width: 51
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1473eeedda8056d0800000000000000
+      internalID: -3003748265655831526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_35
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 448
+        width: 38
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbf75cead45e4d400800000000000000
+      internalID: 348155193021792187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_36
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 448
+        width: 38
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227900713e8839960800000000000000
+      internalID: 7607574704483768098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_37
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 383
+        width: 51
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c977a20772611b680800000000000000
+      internalID: -8741181043108055140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 374
+        width: 61
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbcd9a1227a33b400800000000000000
+      internalID: 338678658848382143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_39
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 374
+        width: 56
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f9a48c7fe36c0370800000000000000
+      internalID: 8290110894319643128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_40
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 382
+        width: 56
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 743e6c70892cda620800000000000000
+      internalID: 2787097702633497415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_41
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 374
+        width: 34
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d782a0a2fd9c17e0800000000000000
+      internalID: -1793384886197647408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_42
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 374
+        width: 59
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 239bf40a69259fa60800000000000000
+      internalID: 7708283044109465906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_43
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 374
+        width: 34
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4f694fa4aa284880800000000000000
+      internalID: -8626598199424356530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_44
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 382
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e822127c65d550ef0800000000000000
+      internalID: -142605185902894450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_45
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 374
+        width: 34
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fcae158862b43e20800000000000000
+      internalID: 3329482186513362161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_46
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 382
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbe909f68fe314d80800000000000000
+      internalID: -8268258204130959681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_47
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 374
+        width: 34
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d410bbb30f6fcb230800000000000000
+      internalID: 3656068509172695373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_48
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 374
+        width: 34
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b4c52312b1423f20800000000000000
+      internalID: 3400852901699372214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_49
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 374
+        width: 59
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f196874a0075450800000000000000
+      internalID: 6077326928554565485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_50
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 382
+        width: 56
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e925cac870efb7b70800000000000000
+      internalID: 8897984797178876574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_51
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 374
+        width: 34
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b49c99a02fb1d6310800000000000000
+      internalID: 1399805785555978571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_52
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 374
+        width: 56
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e9eb95f233f3830800000000000000
+      internalID: 4053014468118879878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_53
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 374
+        width: 61
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37215ae25be0a1950800000000000000
+      internalID: 6420460390104502899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_54
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 331
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 521969e8250175bf0800000000000000
+      internalID: -335781700450217691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_55
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 333
+        width: 47
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae1e88ee2f61ffc20800000000000000
+      internalID: 3242335489369891306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_56
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 333
+        width: 52
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26153bec4dfc25200800000000000000
+      internalID: 167424649074004322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_57
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 274
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2703a79c8c1cbcd0800000000000000
+      internalID: -2541124699578759382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_58
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 333
+        width: 61
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3de36c5f13869b40800000000000000
+      internalID: 5446684970068471099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_59
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 274
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93d806b9fc3140e40800000000000000
+      internalID: 5621640017251175737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_60
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 333
+        width: 61
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b9d1cdce4f62b3a0800000000000000
+      internalID: -6651131315422635592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_61
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 274
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 514c83419dc2f7180800000000000000
+      internalID: -9115517809915804651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_62
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 333
+        width: 62
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00f1f521d4b86f080800000000000000
+      internalID: -9153976029446988032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_63
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 333
+        width: 62
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1af63cff111bb6800800000000000000
+      internalID: 606773265675022241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_64
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 333
+        width: 61
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 978a36914b3059e90800000000000000
+      internalID: -7019700372132091783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_65
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 274
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89dd7203531ce8f30800000000000000
+      internalID: 4579810305267719576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_66
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 274
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b26d6718cd3c8b80800000000000000
+      internalID: -8391264076102278473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_67
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 333
+        width: 61
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77eb6557e166d17e0800000000000000
+      internalID: -1793164795619918217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_68
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 274
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d2139e7418747620800000000000000
+      internalID: 2770971700157944529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_69
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 333
+        width: 52
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ed107b389a5091d0800000000000000
+      internalID: -3346074913257546269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_70
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 333
+        width: 47
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d630fe31ddf68ea0800000000000000
+      internalID: -5870725989084940586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_71
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 331
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73e3251933ea25110800000000000000
+      internalID: 1248251583239700023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_72
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 198
+        width: 46
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a619afaeb8bc44f20800000000000000
+      internalID: 3406071020002120042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_73
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 198
+        width: 43
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d895968f17c24aa90800000000000000
+      internalID: -7303663827677521523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_74
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 198
+        width: 46
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c80c276e60ec598d0800000000000000
+      internalID: -2840137460955823988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_75
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 274
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f888ad287159ba960800000000000000
+      internalID: 7614343523212101775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_76
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 274
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f527db16e5a0c60800000000000000
+      internalID: 7785138679746551633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_77
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 274
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77626d7b3f18a2da0800000000000000
+      internalID: -5968815472364870025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_78
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 274
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 584de5dfd3a997b50800000000000000
+      internalID: 6591469120667964549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_79
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 198
+        width: 46
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16d45e4565eecfac0800000000000000
+      internalID: -3819916329358111391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_80
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 198
+        width: 43
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98a2189cfabc8c280800000000000000
+      internalID: -9022737897576387959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_81
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 198
+        width: 46
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa086acb2130354b0800000000000000
+      internalID: -5453011344806215505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_82
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 198
+        width: 43
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5026ac203a1239d10800000000000000
+      internalID: 2131084032686580229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_83
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 198
+        width: 42
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eaa2ba9ae89d4e90800000000000000
+      internalID: -7039802509125047576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_84
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 198
+        width: 40
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 163ab2f59252f9410800000000000000
+      internalID: 1485947261676135265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_85
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 128
+        width: 53
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20f1590233a1f6cc0800000000000000
+      internalID: -3715722360665071870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_86
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 198
+        width: 37
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9be70794ddeb2cb0800000000000000
+      internalID: -4887551473257813090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_87
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 198
+        width: 37
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2253ac41ae3da930800000000000000
+      internalID: 4156046893629264428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_88
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 128
+        width: 53
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6771905ffc665acb0800000000000000
+      internalID: -4853359980066564234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_89
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 198
+        width: 40
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c2d9a3d3f0980130800000000000000
+      internalID: 3533233284574728902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_90
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 198
+        width: 42
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5444f5436e1a173e0800000000000000
+      internalID: -2057685544638397371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_91
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 198
+        width: 43
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e3b2680407da1920800000000000000
+      internalID: 2961916117270049767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_92
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 128
+        width: 45
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf8a3fa8cc6da2070800000000000000
+      internalID: 8082508655262673147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_93
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 128
+        width: 46
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bebf70502ad5dc640800000000000000
+      internalID: 5101836903331134443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_94
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 128
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb80c205abe5b57d0800000000000000
+      internalID: -2928642978372384577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_95
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 128
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac3cf009cc3ab3210800000000000000
+      internalID: 1313823815294239690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_96
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 74
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d7289299be6dd450800000000000000
+      internalID: 6115165612346451921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_97
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 128
+        width: 53
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1a36b4ad70d3cff0800000000000000
+      internalID: -16940735526454753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_98
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 128
+        width: 53
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fce756bb205fd5c0800000000000000
+      internalID: -4188540979758240521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_99
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 74
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d061a966f42793ed0800000000000000
+      internalID: -2433788438267685363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_100
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 128
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdc7ad77b78edfb20800000000000000
+      internalID: 3169945329728126172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_101
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 128
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28064e44c7ceb6e10800000000000000
+      internalID: 2192105662121795714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_102
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 128
+        width: 46
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64f724760e5611e90800000000000000
+      internalID: -7056747126633365690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_103
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 128
+        width: 45
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68f0c7c0df83b1c90800000000000000
+      internalID: -7198096919934267514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_104
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 64
+        width: 49
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b0a978d2477fe20800000000000000
+      internalID: 3384301383889587006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_105
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eec7a9b6b64b2450800000000000000
+      internalID: 6065019073797279458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_106
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 34
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f5f9a4e27fd9c050800000000000000
+      internalID: 5821429677908686320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_107
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 10
+        width: 52
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a78a4426de853040800000000000000
+      internalID: 4626761242576062372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_108
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 64
+        width: 49
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0067755d9e863430800000000000000
+      internalID: 3762351345109524490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_109
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 64
+        width: 50
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50295ad00e671fa20800000000000000
+      internalID: 3094385123653947909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_110
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 64
+        width: 50
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 563b12e2c30833b80800000000000000
+      internalID: -8416242282664971419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_111
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 64
+        width: 49
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 486857cb6d4421af0800000000000000
+      internalID: -427203325571266940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_112
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 10
+        width: 52
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db28cb4d59f273340800000000000000
+      internalID: 4843392244826014397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_113
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 64
+        width: 34
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7674f1c6c1200560800000000000000
+      internalID: 7277854135371986559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_114
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 64
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e914442750dbe180800000000000000
+      internalID: -9084938750600668699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_115
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 64
+        width: 49
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db10002e21548edf0800000000000000
+      internalID: -150794640113532483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_116
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 0
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f25046911f203f90800000000000000
+      internalID: -6976024070215150859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_117
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 0
+        width: 34
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14b166001b23b02a0800000000000000
+      internalID: -6770261879024116927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_118
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 0
+        width: 50
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 153927ae023e97620800000000000000
+      internalID: 2772496776135086929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_119
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 0
+        width: 50
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1706fb2ace2c5f20800000000000000
+      internalID: 3412654063495808795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_120
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 0
+        width: 34
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90962dd41f36cc740800000000000000
+      internalID: 5173619959985760521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clone_sprites_121
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 0
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb0a2c1501fe989d0800000000000000
+      internalID: -2771421242299604801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      clone_sprites_0: 2333730117565867513
+      clone_sprites_1: -6219908465321918838
+      clone_sprites_10: 1816524626923351931
+      clone_sprites_100: 3169945329728126172
+      clone_sprites_101: 2192105662121795714
+      clone_sprites_102: -7056747126633365690
+      clone_sprites_103: -7198096919934267514
+      clone_sprites_104: 3384301383889587006
+      clone_sprites_105: 6065019073797279458
+      clone_sprites_106: 5821429677908686320
+      clone_sprites_107: 4626761242576062372
+      clone_sprites_108: 3762351345109524490
+      clone_sprites_109: 3094385123653947909
+      clone_sprites_11: -6049568039480901811
+      clone_sprites_110: -8416242282664971419
+      clone_sprites_111: -427203325571266940
+      clone_sprites_112: 4843392244826014397
+      clone_sprites_113: 7277854135371986559
+      clone_sprites_114: -9084938750600668699
+      clone_sprites_115: -150794640113532483
+      clone_sprites_116: -6976024070215150859
+      clone_sprites_117: -6770261879024116927
+      clone_sprites_118: 2772496776135086929
+      clone_sprites_119: 3412654063495808795
+      clone_sprites_12: -1214749496962623992
+      clone_sprites_120: 5173619959985760521
+      clone_sprites_121: -2771421242299604801
+      clone_sprites_13: -7203280850346518183
+      clone_sprites_14: -2439784520267154383
+      clone_sprites_15: -8220387125154931941
+      clone_sprites_16: 2153000614353753987
+      clone_sprites_17: -6997731285383372
+      clone_sprites_18: -4142732070668639881
+      clone_sprites_19: 3071915375650445156
+      clone_sprites_2: -5640467717324045851
+      clone_sprites_20: 7010527808188487583
+      clone_sprites_21: -929681634985356254
+      clone_sprites_22: 7136356182285029261
+      clone_sprites_23: 5903865788340888598
+      clone_sprites_24: -8430500597813702116
+      clone_sprites_25: 329755590168916331
+      clone_sprites_26: -3465605030635550174
+      clone_sprites_27: 6614800909361626503
+      clone_sprites_28: -7282544426915421196
+      clone_sprites_29: 4487188612428203578
+      clone_sprites_3: -626386894720416226
+      clone_sprites_30: -6350976261530111179
+      clone_sprites_31: 3040268803179507113
+      clone_sprites_32: 3548583817790801487
+      clone_sprites_33: -5741694701398381323
+      clone_sprites_34: -3003748265655831526
+      clone_sprites_35: 348155193021792187
+      clone_sprites_36: 7607574704483768098
+      clone_sprites_37: -8741181043108055140
+      clone_sprites_38: 338678658848382143
+      clone_sprites_39: 8290110894319643128
+      clone_sprites_4: 4087511403913682450
+      clone_sprites_40: 2787097702633497415
+      clone_sprites_41: -1793384886197647408
+      clone_sprites_42: 7708283044109465906
+      clone_sprites_43: -8626598199424356530
+      clone_sprites_44: -142605185902894450
+      clone_sprites_45: 3329482186513362161
+      clone_sprites_46: -8268258204130959681
+      clone_sprites_47: 3656068509172695373
+      clone_sprites_48: 3400852901699372214
+      clone_sprites_49: 6077326928554565485
+      clone_sprites_5: -1351274171880776386
+      clone_sprites_50: 8897984797178876574
+      clone_sprites_51: 1399805785555978571
+      clone_sprites_52: 4053014468118879878
+      clone_sprites_53: 6420460390104502899
+      clone_sprites_54: -335781700450217691
+      clone_sprites_55: 3242335489369891306
+      clone_sprites_56: 167424649074004322
+      clone_sprites_57: -2541124699578759382
+      clone_sprites_58: 5446684970068471099
+      clone_sprites_59: 5621640017251175737
+      clone_sprites_6: 2498540132814704021
+      clone_sprites_60: -6651131315422635592
+      clone_sprites_61: -9115517809915804651
+      clone_sprites_62: -9153976029446988032
+      clone_sprites_63: 606773265675022241
+      clone_sprites_64: -7019700372132091783
+      clone_sprites_65: 4579810305267719576
+      clone_sprites_66: -8391264076102278473
+      clone_sprites_67: -1793164795619918217
+      clone_sprites_68: 2770971700157944529
+      clone_sprites_69: -3346074913257546269
+      clone_sprites_7: -3936585680567594788
+      clone_sprites_70: -5870725989084940586
+      clone_sprites_71: 1248251583239700023
+      clone_sprites_72: 3406071020002120042
+      clone_sprites_73: -7303663827677521523
+      clone_sprites_74: -2840137460955823988
+      clone_sprites_75: 7614343523212101775
+      clone_sprites_76: 7785138679746551633
+      clone_sprites_77: -5968815472364870025
+      clone_sprites_78: 6591469120667964549
+      clone_sprites_79: -3819916329358111391
+      clone_sprites_8: -1600822221574030052
+      clone_sprites_80: -9022737897576387959
+      clone_sprites_81: -5453011344806215505
+      clone_sprites_82: 2131084032686580229
+      clone_sprites_83: -7039802509125047576
+      clone_sprites_84: 1485947261676135265
+      clone_sprites_85: -3715722360665071870
+      clone_sprites_86: -4887551473257813090
+      clone_sprites_87: 4156046893629264428
+      clone_sprites_88: -4853359980066564234
+      clone_sprites_89: 3533233284574728902
+      clone_sprites_9: 1667827789863267363
+      clone_sprites_90: -2057685544638397371
+      clone_sprites_91: 2961916117270049767
+      clone_sprites_92: 8082508655262673147
+      clone_sprites_93: 5101836903331134443
+      clone_sprites_94: -2928642978372384577
+      clone_sprites_95: 1313823815294239690
+      clone_sprites_96: 6115165612346451921
+      clone_sprites_97: -16940735526454753
+      clone_sprites_98: -4188540979758240521
+      clone_sprites_99: -2433788438267685363
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
