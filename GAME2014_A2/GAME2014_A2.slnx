@@ -1,3 +1,6 @@
 ﻿<Solution>
+  <Project Path="SimpleInput.Runtime.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="SimpleInput.Editor.csproj" />
   <Project Path="Unity.2D.Welcome.csproj" />
 </Solution>
