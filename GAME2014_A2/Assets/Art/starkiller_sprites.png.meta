@@ -4771,15 +4771,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_148
+      name: starkiller_back_attack_1
       rect:
         serializedVersion: 2
         x: 12
         y: 2847
         width: 50
         height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.416714, y: 0.69574445}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4793,15 +4793,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_149
+      name: starkiller_back_attack_2
       rect:
         serializedVersion: 2
         x: 65
         y: 2847
         width: 51
         height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4546365, y: 0.74549586}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4815,15 +4815,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_150
+      name: starkiller_back_attack_3
       rect:
         serializedVersion: 2
         x: 120
         y: 2847
         width: 42
         height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.51101685, y: 0.7266223}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4837,15 +4837,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_151
+      name: starkiller_back_attack_4
       rect:
         serializedVersion: 2
         x: 167
         y: 2847
         width: 42
         height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.53304946, y: 0.7035791}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4859,15 +4859,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_152
+      name: starkiller_back_attack_5
       rect:
         serializedVersion: 2
         x: 212
         y: 2847
         width: 60
         height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.70821303, y: 0.68506837}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4881,15 +4881,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_153
+      name: starkiller_back_attack_6
       rect:
         serializedVersion: 2
         x: 282
         y: 2847
         width: 42
         height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.6542315, y: 0.6943213}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4903,15 +4903,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_154
+      name: starkiller_back_attack_7
       rect:
         serializedVersion: 2
         x: 332
         y: 2847
         width: 40
         height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.54626846, y: 0.69432616}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4925,15 +4925,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_155
+      name: starkiller_back_attack_8
       rect:
         serializedVersion: 2
         x: 385
         y: 2847
         width: 47
         height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4507758, y: 0.68144435}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -16547,6 +16547,14 @@ TextureImporter:
       starkiller_attack2_4: 5978476952528419952
       starkiller_attack2_5: -5927634261278531851
       starkiller_attack2_6: -3301625734536134980
+      starkiller_back_attack_1: 826550200986484844
+      starkiller_back_attack_2: 3569488157994872509
+      starkiller_back_attack_3: -7374757843454168826
+      starkiller_back_attack_4: -7290575640401564870
+      starkiller_back_attack_5: -6781016883085941767
+      starkiller_back_attack_6: 3841452925165955168
+      starkiller_back_attack_7: -7321164695452352314
+      starkiller_back_attack_8: 8848680530071033137
       starkiller_fall_1: -4090185515428935723
       starkiller_fall_2: -638340594688853932
       starkiller_fall_3: -2002335972006855991
@@ -16629,15 +16637,7 @@ TextureImporter:
       starkiller_sprites_145: 2481414963342407014
       starkiller_sprites_146: 348873043708216828
       starkiller_sprites_147: -8313327951736956637
-      starkiller_sprites_148: 826550200986484844
-      starkiller_sprites_149: 3569488157994872509
       starkiller_sprites_15: -5222771159322977195
-      starkiller_sprites_150: -7374757843454168826
-      starkiller_sprites_151: -7290575640401564870
-      starkiller_sprites_152: -6781016883085941767
-      starkiller_sprites_153: 3841452925165955168
-      starkiller_sprites_154: -7321164695452352314
-      starkiller_sprites_155: 8848680530071033137
       starkiller_sprites_156: 4850854599086144325
       starkiller_sprites_157: -5028108637481802624
       starkiller_sprites_158: -9112579295389365720

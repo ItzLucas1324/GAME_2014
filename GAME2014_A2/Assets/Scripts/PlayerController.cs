@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5.0f, jumpForce = 5.0f, sprintMulitplier = 1.8f, doubleTapWindow = 0.3f;
-    private float lastRightTapTime = -1f, prevMoveX = 0f, speed;
+    private float lastTapTime = -1f, lastTapDirection = 1f, prevMoveX = 0f, speed;
     private Vector2 movement;
     private bool jumpPressed = false, attackPressed = false, airAttackPressed = false, isGrounded, isSprinting = false;
     Rigidbody2D rb;
@@ -19,19 +19,32 @@ public class PlayerController : MonoBehaviour
     {
         float moveX = SimpleInput.GetAxisRaw("Horizontal");
 
-        if (moveX > 0 && prevMoveX <= 0)
+        if (moveX != 0 && prevMoveX == 0)
         {
-            if (Time.time - lastRightTapTime <= doubleTapWindow)
+            float dir = Mathf.Sign(moveX);
+
+            if (dir == lastTapDirection && Time.time - lastTapTime <= doubleTapWindow)
             {
                 isSprinting = true;
             }
 
-            lastRightTapTime = Time.time;
+            lastTapTime = Time.time;
+            lastTapDirection = dir;
         }
 
-        if (moveX <= 0)
+        if (moveX == 0 || Mathf.Sign(moveX) != lastTapDirection)
         {
             isSprinting = false;
+        }
+        
+        //Character Rotation
+        if (moveX < 0)
+        {
+            transform.rotation = Quaternion.Euler(0f, 180, 0f);
+        }
+        else if (moveX > 0)
+        {
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         }
 
         prevMoveX = moveX;
@@ -39,11 +52,6 @@ public class PlayerController : MonoBehaviour
         an.SetBool("IsWalking", moveX != 0);
 
         an.SetBool("IsSprinting", isSprinting);
-
-        if (moveX != 0)
-        {
-            an.SetFloat("WalkDirection", Mathf.Sign(moveX));
-        }
 
         movement = new Vector2(moveX, 0f);
 
