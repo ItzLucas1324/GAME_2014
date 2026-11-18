@@ -8,11 +8,14 @@ public class PlayerController : MonoBehaviour
     private bool jumpPressed = false, attackPressed = false, airAttackPressed = false, isGrounded, isSprinting = false, isBlocking = false, blockHeld = false, forceHeld = false, isUsingForce = false;
     Rigidbody2D rb;
     Animator an;
+    ContactFilter2D groundFilter;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         an = GetComponent<Animator>();
+
+        groundFilter.SetNormalAngle(80f, 100f);
     }
 
     void Update()
@@ -149,6 +152,21 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        bool wasGrounded = isGrounded;
+        isGrounded = rb.IsTouching(groundFilter);
+        an.SetBool("IsGrounded", isGrounded);
+
+        if (isGrounded && !wasGrounded)
+        {
+            an.SetBool("IsJumping", false);
+
+            if (airAttackPressed)
+            {
+                an.Play("PlayerFallAttack");
+                airAttackPressed = false;
+            }
+        }
+
         var state = an.GetCurrentAnimatorStateInfo(0);
         if (state.IsName("PlayerAttack1") || state.IsName("PlayerAttack2") || state.IsName("PlayerAttack3") || state.IsName("PlayerFallAttack") 
             || state.IsName("PlayerBackAttack") || state.IsName("PlayerUpAttack") || isBlocking || isUsingForce)
@@ -208,30 +226,5 @@ public class PlayerController : MonoBehaviour
     public void StopForce()
     {
         forceHeld = false;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground") && collision.GetContact(0).normal.y > 0.8f)
-        {
-            an.SetBool("IsJumping", false);
-            an.SetBool("IsGrounded", true);
-            isGrounded = true;
-
-            if (airAttackPressed)
-            {
-                an.Play("PlayerFallAttack");
-                airAttackPressed = false;
-            }
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            an.SetBool("IsGrounded", false);
-            isGrounded = false;
-        }
     }
 }
