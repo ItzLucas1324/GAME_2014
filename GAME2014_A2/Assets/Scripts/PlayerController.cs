@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed = 5.0f, jumpForce = 5.0f, sprintMulitplier = 1.8f, doubleTapWindow = 0.3f, backAttackWindow = 0.25f, upAttackWindow = 0.25f;
     private float lastTapTime = -1f, lastTapDirection = 1f, lastBackTapTime = -1f, prevMoveX = 0f, lastUpTapTime = -1f, prevMoveY = 0f, speed;
     private Vector2 movement;
-    private bool jumpPressed = false, attackPressed = false, airAttackPressed = false, isGrounded, isSprinting = false;
+    private bool jumpPressed = false, attackPressed = false, airAttackPressed = false, isGrounded, isSprinting = false, isBlocking = false, blockHeld = false, forceHeld = false, isUsingForce = false;
     Rigidbody2D rb;
     Animator an;
 
@@ -22,6 +22,12 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.J)) Attack();
         if (Input.GetKeyDown(KeyCode.Space)) Jump();
+
+        isBlocking = isGrounded && (blockHeld || Input.GetKey(KeyCode.K));
+        an.SetBool("IsBlocking", isBlocking);
+
+        isUsingForce = isGrounded && (forceHeld || Input.GetKey(KeyCode.I));
+        an.SetBool("IsUsingForce", isUsingForce);
 
         if (moveX != 0 && prevMoveX == 0)
         {
@@ -54,7 +60,7 @@ public class PlayerController : MonoBehaviour
         bool inBackAttack = an.GetCurrentAnimatorStateInfo(0).IsName("PlayerBackAttack");
         bool inUpAttack = an.GetCurrentAnimatorStateInfo(0).IsName("PlayerUpAttack");
 
-        if (!inBackAttack)
+        if (!inBackAttack && !isUsingForce)
         {
             if (moveX < 0)
             {
@@ -64,6 +70,27 @@ public class PlayerController : MonoBehaviour
             {
                 transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             }
+        }
+
+        // Force Stuff
+        if (isUsingForce && moveX != 0 && prevMoveX == 0)
+        {
+            var forceState = an.GetCurrentAnimatorStateInfo(0);
+            bool inForceAction = forceState.IsName("PlayerForcePush") || forceState.IsName("PlayerForcePull");
+
+            if (!inForceAction)
+            {
+                if (Mathf.Sign(moveX) == Mathf.Sign(transform.right.x))
+                {
+                    an.Play("PlayerForcePush");
+                }
+                else
+                {
+                    // Force pull stuff
+                }
+            }
+
+            lastBackTapTime = -1f;
         }
 
         prevMoveX = moveX;
@@ -77,7 +104,7 @@ public class PlayerController : MonoBehaviour
 
         if (attackPressed)
         {
-            if (isGrounded)
+            if (isGrounded && !isBlocking && !isUsingForce)
             {
                 if (!inBackAttack && !inUpAttack)
                 {
@@ -90,7 +117,7 @@ public class PlayerController : MonoBehaviour
                         an.Play("PlayerUpAttack");
                         lastUpTapTime = -1f;
                     }
-                    else if (backAttack)
+                    else if (backAttack && !isUsingForce)
                     {
                         if (transform.right.x > 0)
                         {
@@ -105,7 +132,7 @@ public class PlayerController : MonoBehaviour
                         an.Play("PlayerBackAttack");
                         lastBackTapTime = -1f;
                     }
-                    else if (!an.GetCurrentAnimatorStateInfo(0).IsName("PlayerAttack2"))
+                    else if (!an.GetCurrentAnimatorStateInfo(0).IsName("PlayerAttack3"))
                     {
                         an.SetTrigger("Attack");
                     }
@@ -123,8 +150,8 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         var state = an.GetCurrentAnimatorStateInfo(0);
-        if (state.IsName("PlayerAttack1") || state.IsName("PlayerAttack2") || state.IsName("PlayerFallAttack") 
-            || state.IsName("PlayerBackAttack") || state.IsName("PlayerUpAttack"))
+        if (state.IsName("PlayerAttack1") || state.IsName("PlayerAttack2") || state.IsName("PlayerAttack3") || state.IsName("PlayerFallAttack") 
+            || state.IsName("PlayerBackAttack") || state.IsName("PlayerUpAttack") || isBlocking || isUsingForce)
         {
             rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
             return;
@@ -151,7 +178,7 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
-        if (!isGrounded)
+        if (!isGrounded || isBlocking || isUsingForce)
             return;
 
         jumpPressed = true;
@@ -161,6 +188,26 @@ public class PlayerController : MonoBehaviour
     public void Attack()
     {
         attackPressed = true;
+    }
+
+    public void StartBlock()
+    {
+        blockHeld = true;
+    }
+
+    public void StopBlock()
+    {
+        blockHeld = false;
+    }
+
+    public void StartForce()
+    {
+        forceHeld = true;
+    }
+
+    public void StopForce()
+    {
+        forceHeld = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

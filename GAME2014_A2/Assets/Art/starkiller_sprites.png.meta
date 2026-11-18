@@ -3151,7 +3151,7 @@ TextureImporter:
         width: 34
         height: 86
       alignment: 9
-      pivot: {x: 0.49999955, y: 0.40302506}
+      pivot: {x: 0.5715495, y: 0.39494005}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3173,7 +3173,7 @@ TextureImporter:
         width: 62
         height: 67
       alignment: 9
-      pivot: {x: 0.49999964, y: 0.52928597}
+      pivot: {x: 0.33183935, y: 0.56038654}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3195,7 +3195,7 @@ TextureImporter:
         width: 62
         height: 45
       alignment: 9
-      pivot: {x: 0.5, y: 0.7289334}
+      pivot: {x: 0.33183855, y: 0.7675239}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3217,7 +3217,7 @@ TextureImporter:
         width: 60
         height: 41
       alignment: 9
-      pivot: {x: 0.5, y: 0.79950696}
+      pivot: {x: 0.34360734, y: 0.84181476}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3239,7 +3239,7 @@ TextureImporter:
         width: 59
         height: 40
       alignment: 9
-      pivot: {x: 0.4999995, y: 0.8117676}
+      pivot: {x: 0.3468478, y: 0.8551758}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3261,7 +3261,7 @@ TextureImporter:
         width: 60
         height: 41
       alignment: 9
-      pivot: {x: 0.49182332, y: 0.81108874}
+      pivot: {x: 0.34122366, y: 0.827994}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3283,7 +3283,7 @@ TextureImporter:
         width: 55
         height: 43
       alignment: 9
-      pivot: {x: 0.4821583, y: 0.76239437}
+      pivot: {x: 0.374737, y: 0.78661543}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3305,7 +3305,7 @@ TextureImporter:
         width: 47
         height: 49
       alignment: 9
-      pivot: {x: 0.4686844, y: 0.6802007}
+      pivot: {x: 0.43171206, y: 0.69438076}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3327,7 +3327,7 @@ TextureImporter:
         width: 40
         height: 51
       alignment: 9
-      pivot: {x: 0.48773345, y: 0.682756}
+      pivot: {x: 0.496418, y: 0.66910326}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3349,7 +3349,7 @@ TextureImporter:
         width: 35
         height: 59
       alignment: 9
-      pivot: {x: 0.4859811, y: 0.5831485}
+      pivot: {x: 0.5952026, y: 0.58314025}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5541,15 +5541,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_185
+      name: starkiller_block_1
       rect:
         serializedVersion: 2
         x: 6
         y: 2621
         width: 36
         height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5065348, y: 0.6447707}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5563,15 +5563,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_186
+      name: starkiller_block_2
       rect:
         serializedVersion: 2
         x: 46
         y: 2621
         width: 36
         height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5261379, y: 0.63315797}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5585,15 +5585,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_187
+      name: starkiller_block_3
       rect:
         serializedVersion: 2
         x: 88
         y: 2621
         width: 36
         height: 56
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5196037, y: 0.5924203}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5607,15 +5607,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_188
+      name: starkiller_force_1
       rect:
         serializedVersion: 2
         x: 155
         y: 2621
         width: 36
         height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.52104354, y: 0.5229566}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5629,15 +5629,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_189
+      name: starkiller_force_2
       rect:
         serializedVersion: 2
         x: 195
         y: 2621
         width: 39
         height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5485648, y: 0.5172193}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5651,15 +5651,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_190
+      name: starkiller_force_3
       rect:
         serializedVersion: 2
         x: 238
         y: 2621
         width: 43
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.57928395, y: 0.5295944}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5673,15 +5673,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_191
+      name: starkiller_force_4
       rect:
         serializedVersion: 2
         x: 287
         y: 2621
         width: 43
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5792825, y: 0.5295944}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5695,15 +5695,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_192
+      name: starkiller_force_5
       rect:
         serializedVersion: 2
         x: 337
         y: 2621
         width: 43
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.57928395, y: 0.53551483}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5717,15 +5717,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_193
+      name: starkiller_force_6
       rect:
         serializedVersion: 2
         x: 384
         y: 2621
         width: 43
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.57928395, y: 0.53551483}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5739,15 +5739,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_194
+      name: starkiller_force_7
       rect:
         serializedVersion: 2
         x: 434
         y: 2621
         width: 43
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.57928395, y: 0.53551483}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -10447,15 +10447,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_409
+      name: starkiller_force_push_1
       rect:
         serializedVersion: 2
         x: 4
         y: 1436
         width: 35
         height: 56
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.49200624, y: 0.61478966}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -10469,15 +10469,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_410
+      name: starkiller_force_push_2
       rect:
         serializedVersion: 2
         x: 46
         y: 1436
         width: 43
         height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.49999982, y: 0.6644072}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -10491,15 +10491,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_411
+      name: starkiller_force_push_3
       rect:
         serializedVersion: 2
         x: 94
         y: 1436
         width: 43
         height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6644}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -10513,15 +10513,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_412
+      name: starkiller_force_push_4
       rect:
         serializedVersion: 2
         x: 143
         y: 1436
         width: 39
         height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55733234, y: 0.67886233}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -10535,15 +10535,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_413
+      name: starkiller_force_push_5
       rect:
         serializedVersion: 2
         x: 189
         y: 1436
         width: 39
         height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5573312, y: 0.68446046}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -10557,15 +10557,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_414
+      name: starkiller_force_push_6
       rect:
         serializedVersion: 2
         x: 238
         y: 1436
         width: 39
         height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55733156, y: 0.6900537}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -10579,15 +10579,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_415
+      name: starkiller_force_push_7
       rect:
         serializedVersion: 2
         x: 288
         y: 1436
         width: 39
         height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55733, y: 0.69005126}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -10601,15 +10601,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_416
+      name: starkiller_force_push_8
       rect:
         serializedVersion: 2
         x: 334
         y: 1436
         width: 41
         height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.52324176, y: 0.69003904}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -10623,15 +10623,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_417
+      name: starkiller_force_push_9
       rect:
         serializedVersion: 2
         x: 382
         y: 1436
         width: 56
         height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.39019558, y: 0.6612408}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -10645,15 +10645,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_418
+      name: starkiller_force_push_10
       rect:
         serializedVersion: 2
         x: 446
         y: 1436
         width: 57
         height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3823167, y: 0.669886}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -10667,15 +10667,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_419
+      name: starkiller_force_push_11
       rect:
         serializedVersion: 2
         x: 510
         y: 1436
         width: 54
         height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.40165767, y: 0.66988117}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -10689,15 +10689,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_420
+      name: starkiller_force_push_12
       rect:
         serializedVersion: 2
         x: 572
         y: 1436
         width: 47
         height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.45837012, y: 0.669886}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -16497,6 +16497,9 @@ TextureImporter:
       starkiller_back_attack_6: 3841452925165955168
       starkiller_back_attack_7: -7321164695452352314
       starkiller_back_attack_8: 8848680530071033137
+      starkiller_block_1: -3203023634039571804
+      starkiller_block_2: 2080609486344949329
+      starkiller_block_3: 7486953466665577038
       starkiller_fall_1: -4090185515428935723
       starkiller_fall_2: -638340594688853932
       starkiller_fall_3: -2002335972006855991
@@ -16510,6 +16513,25 @@ TextureImporter:
       starkiller_fall_attack_7: -1950670820901927007
       starkiller_fall_attack_8: -8527888119739703951
       starkiller_fall_attack_9: -6624541082947680372
+      starkiller_force_1: -2908211145242550586
+      starkiller_force_2: -8409969966705871300
+      starkiller_force_3: 7273470111434137339
+      starkiller_force_4: 2875547448287266481
+      starkiller_force_5: -8581990773639464164
+      starkiller_force_6: 2800295525721263889
+      starkiller_force_7: 1850518814925396191
+      starkiller_force_push_1: 5935838662807534873
+      starkiller_force_push_10: -4833201670558885739
+      starkiller_force_push_11: 8533492620634938786
+      starkiller_force_push_12: 7762660196462485845
+      starkiller_force_push_2: -6684957415939304898
+      starkiller_force_push_3: -830243229858686739
+      starkiller_force_push_4: -88293972018154996
+      starkiller_force_push_5: 354775720159250474
+      starkiller_force_push_6: 5251797305152005577
+      starkiller_force_push_7: 1843094584213247436
+      starkiller_force_push_8: -7598747196953261067
+      starkiller_force_push_9: -3615599189839857072
       starkiller_idle_1: 3301975121510118511
       starkiller_idle_2: 5856359993915069587
       starkiller_idle_3: 91392011012361998
@@ -16601,17 +16623,7 @@ TextureImporter:
       starkiller_sprites_182: 8736246306711549978
       starkiller_sprites_183: -1387952420221808293
       starkiller_sprites_184: -9125935390173602120
-      starkiller_sprites_185: -3203023634039571804
-      starkiller_sprites_186: 2080609486344949329
-      starkiller_sprites_187: 7486953466665577038
-      starkiller_sprites_188: -2908211145242550586
-      starkiller_sprites_189: -8409969966705871300
       starkiller_sprites_19: -5694444730975635878
-      starkiller_sprites_190: 7273470111434137339
-      starkiller_sprites_191: 2875547448287266481
-      starkiller_sprites_192: -8581990773639464164
-      starkiller_sprites_193: 2800295525721263889
-      starkiller_sprites_194: 1850518814925396191
       starkiller_sprites_195: 2854369862104404058
       starkiller_sprites_196: 6386822219577843454
       starkiller_sprites_2: -2997694118231454370
@@ -16820,18 +16832,6 @@ TextureImporter:
       starkiller_sprites_406: 6762292166886882442
       starkiller_sprites_407: 607151794999560468
       starkiller_sprites_408: 6944655469557167268
-      starkiller_sprites_409: 5935838662807534873
-      starkiller_sprites_410: -6684957415939304898
-      starkiller_sprites_411: -830243229858686739
-      starkiller_sprites_412: -88293972018154996
-      starkiller_sprites_413: 354775720159250474
-      starkiller_sprites_414: 5251797305152005577
-      starkiller_sprites_415: 1843094584213247436
-      starkiller_sprites_416: -7598747196953261067
-      starkiller_sprites_417: -3615599189839857072
-      starkiller_sprites_418: -4833201670558885739
-      starkiller_sprites_419: 8533492620634938786
-      starkiller_sprites_420: 7762660196462485845
       starkiller_sprites_421: -7158277693439810783
       starkiller_sprites_422: 7405101217087777085
       starkiller_sprites_423: -6663613937122055547
