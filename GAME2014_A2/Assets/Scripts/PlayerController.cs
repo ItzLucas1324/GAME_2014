@@ -6,14 +6,17 @@ public class PlayerController : MonoBehaviour
     private float lastTapTime = -1f, lastTapDirection = 1f, lastBackTapTime = -1f, prevMoveX = 0f, lastUpTapTime = -1f, prevMoveY = 0f, speed;
     private Vector2 movement;
     private bool jumpPressed = false, attackPressed = false, airAttackPressed = false, isGrounded, isSprinting = false, isBlocking = false, blockHeld = false, forceHeld = false, isUsingForce = false;
+    [System.NonSerialized] public bool isDead = false;
     Rigidbody2D rb;
     Animator an;
+    GameManager gameManager;
     ContactFilter2D groundFilter;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         an = GetComponent<Animator>();
+        gameManager = FindAnyObjectByType<GameManager>();
 
         groundFilter.SetNormalAngle(80f, 100f);
     }
@@ -76,20 +79,35 @@ public class PlayerController : MonoBehaviour
         }
 
         // Force Stuff
-        if (isUsingForce && moveX != 0 && prevMoveX == 0)
+        if (isUsingForce)
         {
             var forceState = an.GetCurrentAnimatorStateInfo(0);
-            bool inForceAction = forceState.IsName("PlayerForcePush") || forceState.IsName("PlayerForcePull");
+            bool inForceAction = forceState.IsName("PlayerForcePush") || forceState.IsName("PlayerForcePull")
+                || forceState.IsName("PlayerForceLightning");
 
-            if (!inForceAction)
+            if (moveX != 0 && prevMoveX == 0)
             {
-                if (Mathf.Sign(moveX) == Mathf.Sign(transform.right.x))
+                if (!inForceAction)
                 {
-                    an.Play("PlayerForcePush");
+                    if (Mathf.Sign(moveX) == Mathf.Sign(transform.right.x))
+                    {
+                        an.Play("PlayerForcePush");
+                    }
+                    else
+                    {
+                        an.Play("PlayerForcePull");
+                    }
                 }
-                else
+            }
+
+            if (moveY != 0 && prevMoveY == 0)
+            {
+                if (!inForceAction)
                 {
-                    // Force pull stuff
+                    if (Mathf.Sign(moveY) == Mathf.Sign(transform.up.y))
+                    {
+                        an.Play("PlayerForceLightning");
+                    }
                 }
             }
 
@@ -100,11 +118,11 @@ public class PlayerController : MonoBehaviour
         prevMoveY = moveY;
 
         an.SetBool("IsWalking", moveX != 0);
-
         an.SetBool("IsSprinting", isSprinting);
 
         movement = new Vector2(moveX, 0f);
 
+        // Attack Stuff
         if (attackPressed)
         {
             if (isGrounded && !isBlocking && !isUsingForce)
@@ -147,6 +165,17 @@ public class PlayerController : MonoBehaviour
             }
 
             attackPressed = false;
+        }
+
+        if (transform.position.y < -20f)
+        {
+            isDead = true;
+
+            if (isDead)
+            {
+                gameManager.GameOver();
+                gameObject.SetActive(false);
+            }
         }
     }
 
