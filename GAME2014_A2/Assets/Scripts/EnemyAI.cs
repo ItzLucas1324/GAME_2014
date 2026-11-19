@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 2f, ledgeCheckDistance = 0.5f, playerAgroDistance = 5f, stopDistance = 1f;
+    [SerializeField] private float moveSpeed = 2f, ledgeCheckDistance = 0.5f, playerAgroDistance = 5f, stopDistance = 1f, hitStunTime = 0.5f;
     [SerializeField] private LayerMask groundLayer;
-    private float direction = 1f, stopTimer, shootTimer;
+    private float direction = 1f, stopTimer, shootTimer, hitTimer;
     private bool isPlayerInSight = false;
     Rigidbody2D rb;
     Collider2D col;
@@ -32,6 +32,13 @@ public class EnemyAI : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (hitTimer > 0)
+        {
+            hitTimer -= Time.fixedDeltaTime;
+        }
+
+        bool isHit = hitTimer > 0;
+
         bool isGrounded = rb.IsTouching(groundFilter);
         float target = player.transform.position.x - transform.position.x;
 
@@ -56,7 +63,7 @@ public class EnemyAI : MonoBehaviour
             {
                 bool inShoot = an.GetCurrentAnimatorStateInfo(0).IsName("CloneShooting");
 
-                if (!inShoot)
+                if (!inShoot && !isHit)
                 {
                     stopTimer -= Time.fixedDeltaTime;
 
@@ -69,23 +76,26 @@ public class EnemyAI : MonoBehaviour
             }
             else
             {
-                an.SetBool("IsWalking", false);
-                an.SetBool("IsShooting", true);
-
-                shootTimer -= Time.fixedDeltaTime;
-
-                if (shootTimer <= 0)
+                if (!isHit)
                 {
-                    an.SetBool("IsShooting", false);
+                    an.SetBool("IsWalking", false);
+                    an.SetBool("IsShooting", true);
 
-                    stopTimer = Random.Range(0.2f, 1f);
-                    shootTimer = Random.Range(2f, 4f);
+                    shootTimer -= Time.fixedDeltaTime;
+
+                    if (shootTimer <= 0)
+                    {
+                        an.SetBool("IsShooting", false);
+
+                        stopTimer = Random.Range(0.2f, 1f);
+                        shootTimer = Random.Range(2f, 4f);
+                    }
                 }
             }
         }
 
         an.SetBool("IsWalking", rb.linearVelocity.x != 0);
-        an.SetBool("IsShooting", isPlayerInSight && stopTimer <= 0);
+        an.SetBool("IsShooting", isPlayerInSight && stopTimer <= 0 && !isHit);
 
         if (direction < 0)
         {
@@ -94,6 +104,23 @@ public class EnemyAI : MonoBehaviour
         else
         {
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("PlayerAttack"))
+        {
+            hitTimer = hitStunTime;
+            an.Play("CloneIdle");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("PlayerAttack"))
+        {
+
         }
     }
 }

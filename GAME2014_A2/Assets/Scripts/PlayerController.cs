@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5.0f, jumpForce = 5.0f, sprintMulitplier = 1.8f, doubleTapWindow = 0.3f, backAttackWindow = 0.25f, upAttackWindow = 0.25f, backFlipWindow = 0.25f;
+    [SerializeField] GameObject attackHitBox;
     private float lastTapTime = -1f, lastTapDirection = 1f, lastBackTapTime = -1f, prevMoveX = 0f, lastUpTapTime = -1f, prevMoveY = 0f, speed;
     private Vector2 movement;
     private bool jumpPressed = false, attackPressed = false, airAttackPressed = false, isGrounded, isSprinting = false, isBlocking = false, blockHeld = false, forceHeld = false, isUsingForce = false, isBackFlipping = false;
@@ -19,6 +20,8 @@ public class PlayerController : MonoBehaviour
         gameManager = FindAnyObjectByType<GameManager>();
 
         groundFilter.SetNormalAngle(80f, 100f);
+
+        attackHitBox.SetActive(false);
     }
 
     void Update()
@@ -252,6 +255,16 @@ public class PlayerController : MonoBehaviour
     public void Attack()
     {
         attackPressed = true;
+    }
+
+    public void EnableAttackCollider()
+    {
+        attackHitBox.SetActive(true);
+    }
+
+    public void DisableAttackCollider()
+    {
+        attackHitBox.SetActive(false);
     }
 
     public void StartBlock()
