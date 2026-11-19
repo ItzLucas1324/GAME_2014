@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5.0f, jumpForce = 5.0f, sprintMulitplier = 1.8f, doubleTapWindow = 0.3f, backAttackWindow = 0.25f, upAttackWindow = 0.25f;
+    [SerializeField] private float moveSpeed = 5.0f, jumpForce = 5.0f, sprintMulitplier = 1.8f, doubleTapWindow = 0.3f, backAttackWindow = 0.25f, upAttackWindow = 0.25f, backFlipWindow = 0.25f;
     private float lastTapTime = -1f, lastTapDirection = 1f, lastBackTapTime = -1f, prevMoveX = 0f, lastUpTapTime = -1f, prevMoveY = 0f, speed;
     private Vector2 movement;
-    private bool jumpPressed = false, attackPressed = false, airAttackPressed = false, isGrounded, isSprinting = false, isBlocking = false, blockHeld = false, forceHeld = false, isUsingForce = false;
+    private bool jumpPressed = false, attackPressed = false, airAttackPressed = false, isGrounded, isSprinting = false, isBlocking = false, blockHeld = false, forceHeld = false, isUsingForce = false, isBackFlipping = false;
     [System.NonSerialized] public bool isDead = false;
     Rigidbody2D rb;
     Animator an;
@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
         bool inBackAttack = an.GetCurrentAnimatorStateInfo(0).IsName("PlayerBackAttack");
         bool inUpAttack = an.GetCurrentAnimatorStateInfo(0).IsName("PlayerUpAttack");
 
-        if (!inBackAttack && !isUsingForce)
+        if (!inBackAttack && !isUsingForce && !isBackFlipping)
         {
             if (moveX < 0)
             {
@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour
         // Attack Stuff
         if (attackPressed)
         {
-            if (isGrounded && !isBlocking && !isUsingForce)
+            if (isGrounded && !isBlocking && !isUsingForce && !isBackFlipping)
             {
                 if (!inBackAttack && !inUpAttack)
                 {
@@ -188,6 +188,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded && !wasGrounded)
         {
             an.SetBool("IsJumping", false);
+            isBackFlipping = false;
 
             if (airAttackPressed)
             {
@@ -227,6 +228,22 @@ public class PlayerController : MonoBehaviour
     {
         if (!isGrounded || isBlocking || isUsingForce)
             return;
+
+        if (Time.time - lastBackTapTime <= backFlipWindow)
+        {
+            if (transform.right.x > 0)
+            {
+                transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            }
+
+            isBackFlipping = true;
+            lastBackTapTime = -1f;
+            an.Play("PlayerBackFlip");
+        }
 
         jumpPressed = true;
         an.SetBool("IsJumping", true);
