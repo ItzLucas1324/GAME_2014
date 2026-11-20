@@ -7,7 +7,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     private float direction = 1f, stopTimer, shootTimer, hitTimer;
     private int currentHealth;
-    private bool isPlayerInSight = false;
+    private bool isPlayerInSight = false, wasGrounded = true;
     Rigidbody2D rb;
     Collider2D col;
     Animator an;
@@ -41,9 +41,25 @@ public class EnemyAI : MonoBehaviour
             hitTimer -= Time.fixedDeltaTime;
         }
 
-        bool isHit = hitTimer > 0;
-
         bool isGrounded = rb.IsTouching(groundFilter);
+        bool inForcePull = an.GetCurrentAnimatorStateInfo(0).IsName("CloneForcePull");
+
+        if (isGrounded && !wasGrounded)
+        {
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+
+            if (inForcePull)
+            {
+                an.Play("CloneIdle");
+                inForcePull = false;
+                hitTimer = hitStunTime;
+            }
+        }
+
+        wasGrounded = isGrounded;
+
+        bool isHit = hitTimer > 0 || inForcePull;
+
         float target = player.transform.position.x - transform.position.x;
 
         if (!isHit)
@@ -135,6 +151,7 @@ public class EnemyAI : MonoBehaviour
             else if (force.mode == ForceScript.ForceMode.ForcePull)
             {
                 rb.linearVelocity = new Vector2(-awayFromPlayer * forceKnockbackSpeed, 5f);
+                an.Play("CloneForcePull");
             }
             else
             {

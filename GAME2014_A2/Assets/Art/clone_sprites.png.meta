@@ -1155,15 +1155,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_29
+      name: clone_pull_2
       rect:
         serializedVersion: 2
         x: 255
         y: 448
         width: 34
         height: 63
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.412805, y: 0.4790853}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1287,15 +1287,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_35
+      name: clone_pull_1
       rect:
         serializedVersion: 2
         x: 289
         y: 448
         width: 38
         height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.473995, y: 0.49459988}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3214,6 +3214,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      clone_pull_1: 348155193021792187
+      clone_pull_2: 4487188612428203578
       clone_sprites_0: 2333730117565867513
       clone_sprites_1: -6219908465321918838
       clone_sprites_100: 3169945329728126172
@@ -3252,13 +3254,11 @@ TextureImporter:
       clone_sprites_25: 329755590168916331
       clone_sprites_26: -3465605030635550174
       clone_sprites_27: 6614800909361626503
-      clone_sprites_29: 4487188612428203578
       clone_sprites_3: -626386894720416226
       clone_sprites_31: 3040268803179507113
       clone_sprites_32: 3548583817790801487
       clone_sprites_33: -5741694701398381323
       clone_sprites_34: -3003748265655831526
-      clone_sprites_35: 348155193021792187
       clone_sprites_36: 7607574704483768098
       clone_sprites_37: -8741181043108055140
       clone_sprites_38: 338678658848382143
