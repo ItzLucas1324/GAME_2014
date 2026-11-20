@@ -580,7 +580,7 @@ GameObject:
   - component: {fileID: 223498962}
   m_Layer: 0
   m_Name: EnemyClone
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -676,6 +676,9 @@ MonoBehaviour:
   ledgeCheckDistance: 0.5
   playerAgroDistance: 5
   stopDistance: 1
+  hitStunTime: 0.5
+  forceKnockbackSpeed: 6
+  maxHealth: 10
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -23381,6 +23384,99 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1464166413}
   m_CullTransparentMesh: 1
+--- !u!1 &1615885000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1615885001}
+  - component: {fileID: 1615885002}
+  - component: {fileID: 1615885003}
+  m_Layer: 0
+  m_Name: ForceCollider
+  m_TagString: PlayerForce
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1615885001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615885000}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.08, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2012328948}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1615885002
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615885000}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.97501874, y: -0.0086199045}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.9963939, y: 0.34826648}
+  m_EdgeRadius: 0
+--- !u!114 &1615885003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615885000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9587af069890dc647ab621e4cb9b57a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ForceScript
+  forceLightningSize: {x: 1.218001, y: 0.3482665}
+  forceLightningOffset: {x: 0.5858223, y: -0.008619905}
 --- !u!1 &1630591645
 GameObject:
   m_ObjectHideFlags: 0
@@ -37843,9 +37939,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5690204567894837073, guid: feffd919b7f9d0441ad347a35e7c3b78, type: 3}
+      propertyPath: forceHitBox
+      value: 
+      objectReference: {fileID: 1615885000}
+    - target: {fileID: 5690204567894837073, guid: feffd919b7f9d0441ad347a35e7c3b78, type: 3}
       propertyPath: attackHitBox
       value: 
       objectReference: {fileID: 1327190273}
+    - target: {fileID: 5690204567894837073, guid: feffd919b7f9d0441ad347a35e7c3b78, type: 3}
+      propertyPath: backAttackColliderPos.x
+      value: -0.429
+      objectReference: {fileID: 0}
     - target: {fileID: 6101786358516601888, guid: feffd919b7f9d0441ad347a35e7c3b78, type: 3}
       propertyPath: m_Name
       value: Player
@@ -37860,6 +37964,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1688597036336176142, guid: feffd919b7f9d0441ad347a35e7c3b78, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1327190274}
+    - targetCorrespondingSourceObject: {fileID: 1688597036336176142, guid: feffd919b7f9d0441ad347a35e7c3b78, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1615885001}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: feffd919b7f9d0441ad347a35e7c3b78, type: 3}
 --- !u!1660057539 &9223372036854775807

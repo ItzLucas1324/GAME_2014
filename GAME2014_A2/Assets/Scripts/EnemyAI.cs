@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 2f, ledgeCheckDistance = 0.5f, playerAgroDistance = 5f, stopDistance = 1f, hitStunTime = 0.5f;
+    [SerializeField] private float moveSpeed = 2f, ledgeCheckDistance = 0.5f, playerAgroDistance = 5f, stopDistance = 1f, hitStunTime = 0.5f, forceKnockbackSpeed = 6f;
+    [SerializeField] private int maxHealth = 10;
     [SerializeField] private LayerMask groundLayer;
     private float direction = 1f, stopTimer, shootTimer, hitTimer;
+    private int currentHealth;
     private bool isPlayerInSight = false;
     Rigidbody2D rb;
     Collider2D col;
@@ -19,6 +21,8 @@ public class EnemyAI : MonoBehaviour
         an = GetComponent<Animator>();
         player = FindAnyObjectByType<PlayerController>();
         groundFilter.SetNormalAngle(80f, 100f);
+
+        currentHealth = maxHealth;
 
         stopTimer = Random.Range(0.2f, 1f);
         shootTimer = Random.Range(2f, 4f);
@@ -42,7 +46,10 @@ public class EnemyAI : MonoBehaviour
         bool isGrounded = rb.IsTouching(groundFilter);
         float target = player.transform.position.x - transform.position.x;
 
-        rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+        if (!isHit)
+        {
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+        }
 
         if (isPlayerInSight)
         {
@@ -70,7 +77,6 @@ public class EnemyAI : MonoBehaviour
                     if (Mathf.Abs(target) > stopDistance && groundAhead)
                     {
                         rb.linearVelocity = new Vector2(direction * moveSpeed, rb.linearVelocity.y);
-                        an.SetBool("IsWalking", true);
                     }
                 }
             }
@@ -94,7 +100,7 @@ public class EnemyAI : MonoBehaviour
             }
         }
 
-        an.SetBool("IsWalking", rb.linearVelocity.x != 0);
+        an.SetBool("IsWalking", rb.linearVelocity.x != 0 && !isHit);
         an.SetBool("IsShooting", isPlayerInSight && stopTimer <= 0 && !isHit);
 
         if (direction < 0)
@@ -112,15 +118,48 @@ public class EnemyAI : MonoBehaviour
         if (collision.gameObject.CompareTag("PlayerAttack"))
         {
             hitTimer = hitStunTime;
+            TakeDamage(player.currentDamage);
             an.Play("CloneIdle");
+        }
+
+        if (collision.gameObject.CompareTag("PlayerForce"))
+        {
+            ForceScript force = collision.gameObject.GetComponent<ForceScript>();
+
+            float awayFromPlayer = Mathf.Sign(transform.position.x - player.transform.position.x);
+
+            if (force.mode == ForceScript.ForceMode.ForcePush)
+            {
+                rb.linearVelocity = new Vector2(awayFromPlayer * forceKnockbackSpeed, 5f);
+            }
+            else if (force.mode == ForceScript.ForceMode.ForcePull)
+            {
+                rb.linearVelocity = new Vector2(-awayFromPlayer * forceKnockbackSpeed, 5f);
+            }
+            else
+            {
+                rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+            }
+
+            hitTimer = hitStunTime;
+            TakeDamage(force.damage);
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    public void TakeDamage(int amount)
     {
-        if (collision.gameObject.CompareTag("PlayerAttack"))
-        {
+        currentHealth -= amount;
 
+        if (currentHealth <= 0)
+        {
+            Dead();
         }
+
+        Debug.Log("Damage Taken: " + currentHealth);
+    }
+
+    private void Dead()
+    {
+        Destroy(gameObject);
     }
 }

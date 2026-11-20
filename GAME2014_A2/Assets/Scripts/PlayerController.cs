@@ -3,14 +3,19 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5.0f, jumpForce = 5.0f, sprintMulitplier = 1.8f, doubleTapWindow = 0.3f, backAttackWindow = 0.25f, upAttackWindow = 0.25f, backFlipWindow = 0.25f;
-    [SerializeField] GameObject attackHitBox;
+    [SerializeField] GameObject attackHitBox, forceHitBox;
+    [SerializeField] Vector2 backAttackColliderPos;
     private float lastTapTime = -1f, lastTapDirection = 1f, lastBackTapTime = -1f, prevMoveX = 0f, lastUpTapTime = -1f, prevMoveY = 0f, speed;
     private Vector2 movement;
+    private Vector2 frontAttackColliderPos;
     private bool jumpPressed = false, attackPressed = false, airAttackPressed = false, isGrounded, isSprinting = false, isBlocking = false, blockHeld = false, forceHeld = false, isUsingForce = false, isBackFlipping = false;
     [System.NonSerialized] public bool isDead = false;
+    [System.NonSerialized] public int currentDamage;
+    public int damage = 3;
     Rigidbody2D rb;
     Animator an;
     GameManager gameManager;
+    ForceScript forceScript;
     ContactFilter2D groundFilter;
 
     void Start()
@@ -18,10 +23,16 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         an = GetComponent<Animator>();
         gameManager = FindAnyObjectByType<GameManager>();
+        forceScript = FindAnyObjectByType<ForceScript>();
+
+        frontAttackColliderPos = attackHitBox.transform.localPosition;
 
         groundFilter.SetNormalAngle(80f, 100f);
 
+        currentDamage = damage;
+
         attackHitBox.SetActive(false);
+        forceHitBox.SetActive(false);
     }
 
     void Update()
@@ -95,10 +106,12 @@ public class PlayerController : MonoBehaviour
                     if (Mathf.Sign(moveX) == Mathf.Sign(transform.right.x))
                     {
                         an.Play("PlayerForcePush");
+                        forceScript.SetForceMode(ForceScript.ForceMode.ForcePush);
                     }
                     else
                     {
                         an.Play("PlayerForcePull");
+                        forceScript.SetForceMode(ForceScript.ForceMode.ForcePull);
                     }
                 }
             }
@@ -110,6 +123,7 @@ public class PlayerController : MonoBehaviour
                     if (Mathf.Sign(moveY) == Mathf.Sign(transform.up.y))
                     {
                         an.Play("PlayerForceLightning");
+                        forceScript.SetForceMode(ForceScript.ForceMode.ForceLightning);
                     }
                 }
             }
@@ -135,6 +149,9 @@ public class PlayerController : MonoBehaviour
                     bool upAttack = moveY > 0 || Time.time - lastUpTapTime <= upAttackWindow;
                     bool backAttack = Time.time - lastBackTapTime <= backAttackWindow;
 
+                    currentDamage = damage;
+                    attackHitBox.transform.localPosition = frontAttackColliderPos;
+
                     if (upAttack)
                     {
                         an.ResetTrigger("Attack");
@@ -152,6 +169,7 @@ public class PlayerController : MonoBehaviour
                             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                         }
 
+                        attackHitBox.transform.localPosition = backAttackColliderPos;
                         an.ResetTrigger("Attack");
                         an.Play("PlayerBackAttack");
                         lastBackTapTime = -1f;
@@ -195,7 +213,9 @@ public class PlayerController : MonoBehaviour
 
             if (airAttackPressed)
             {
+                attackHitBox.transform.localPosition = frontAttackColliderPos;
                 an.Play("PlayerFallAttack");
+                currentDamage += 1;
                 airAttackPressed = false;
             }
         }
@@ -265,6 +285,16 @@ public class PlayerController : MonoBehaviour
     public void DisableAttackCollider()
     {
         attackHitBox.SetActive(false);
+    }
+
+    public void EnableForceCollider()
+    {
+        forceHitBox.SetActive(true);
+    }
+
+    public void DisableForceCollider()
+    {
+        forceHitBox.SetActive(false);
     }
 
     public void StartBlock()
