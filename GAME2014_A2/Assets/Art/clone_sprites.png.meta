@@ -1221,7 +1221,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_32
+      name: clone_push_2
       rect:
         serializedVersion: 2
         x: 365
@@ -1265,15 +1265,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_34
+      name: clone_fall_2
       rect:
         serializedVersion: 2
         x: 232
-        y: 383
+        y: 374
         width: 51
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 74
+      alignment: 9
+      pivot: {x: 0.37349296, y: 0.395375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1309,7 +1309,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_36
+      name: clone_push_1
       rect:
         serializedVersion: 2
         x: 327
@@ -1335,9 +1335,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 371
-        y: 383
+        y: 374
         width: 51
-        height: 65
+        height: 74
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1353,15 +1353,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_38
+      name: clone_fall_6
       rect:
         serializedVersion: 2
         x: 0
         y: 374
         width: 61
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 31
+      alignment: 9
+      pivot: {x: 0.4100958, y: 0.935983}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1375,15 +1375,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_39
+      name: clone_fall_5
       rect:
         serializedVersion: 2
         x: 61
         y: 374
         width: 56
         height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.37326607, y: 0.8046706}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1397,15 +1397,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_40
+      name: clone_fall_4
       rect:
         serializedVersion: 2
         x: 117
-        y: 382
+        y: 374
         width: 56
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 33
+      alignment: 9
+      pivot: {x: 0.35598454, y: 0.8812459}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1419,37 +1419,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_41
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 374
-        width: 34
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0d782a0a2fd9c17e0800000000000000
-      internalID: -1793384886197647408
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: clone_sprites_42
+      name: clone_fall_3
       rect:
         serializedVersion: 2
         x: 173
         y: 374
         width: 59
         height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.37424326, y: 0.5620364}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1463,37 +1441,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_43
-      rect:
-        serializedVersion: 2
-        x: 238
-        y: 374
-        width: 34
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e4f694fa4aa284880800000000000000
-      internalID: -8626598199424356530
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: clone_sprites_44
+      name: clone_fall_1
       rect:
         serializedVersion: 2
         x: 283
-        y: 382
+        y: 374
         width: 44
-        height: 55
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 63
+      alignment: 9
+      pivot: {x: 0.39002573, y: 0.4641554}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1507,35 +1463,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_45
-      rect:
-        serializedVersion: 2
-        x: 287
-        y: 374
-        width: 34
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1fcae158862b43e20800000000000000
-      internalID: 3329482186513362161
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: clone_sprites_46
       rect:
         serializedVersion: 2
         x: 327
-        y: 382
+        y: 374
         width: 44
-        height: 55
+        height: 63
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1546,50 +1480,6 @@ TextureImporter:
       bones: []
       spriteID: fbe909f68fe314d80800000000000000
       internalID: -8268258204130959681
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: clone_sprites_47
-      rect:
-        serializedVersion: 2
-        x: 333
-        y: 374
-        width: 34
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d410bbb30f6fcb230800000000000000
-      internalID: 3656068509172695373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: clone_sprites_48
-      rect:
-        serializedVersion: 2
-        x: 382
-        y: 374
-        width: 34
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6b4c52312b1423f20800000000000000
-      internalID: 3400852901699372214
       vertices: []
       indices: 
       edges: []
@@ -1705,15 +1595,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_54
+      name: clone_fall_12
       rect:
         serializedVersion: 2
         x: 5
         y: 331
         width: 37
         height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.38665426, y: 0.7325645}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1727,15 +1617,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_55
+      name: clone_fall_11
       rect:
         serializedVersion: 2
         x: 42
         y: 333
         width: 47
         height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.47940892, y: 0.8910217}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1749,15 +1639,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_56
+      name: clone_fall_10
       rect:
         serializedVersion: 2
         x: 89
         y: 333
         width: 52
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4813887, y: 0.90324116}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1771,15 +1661,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_57
+      name: clone_fall_17
       rect:
         serializedVersion: 2
         x: 124
         y: 274
         width: 44
         height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.529326, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1793,15 +1683,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_58
+      name: clone_fall_9
       rect:
         serializedVersion: 2
         x: 143
         y: 333
         width: 61
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 33
+      alignment: 9
+      pivot: {x: 0.41137695, y: 0.8771436}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1815,15 +1705,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_59
+      name: clone_fall_16
       rect:
         serializedVersion: 2
         x: 168
         y: 274
         width: 44
         height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5293267, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1837,15 +1727,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_60
+      name: clone_fall_8
       rect:
         serializedVersion: 2
         x: 204
         y: 333
         width: 61
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 33
+      alignment: 9
+      pivot: {x: 0.4113772, y: 0.8771436}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1859,15 +1749,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_61
+      name: clone_fall_15
       rect:
         serializedVersion: 2
         x: 212
         y: 274
         width: 44
         height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.52932703, y: 0.49462178}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1881,15 +1771,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_62
+      name: clone_fall_7
       rect:
         serializedVersion: 2
         x: 265
         y: 333
         width: 62
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 33
+      alignment: 9
+      pivot: {x: 0.42195377, y: 0.8771436}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2101,15 +1991,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_72
+      name: clone_melee_7
       rect:
         serializedVersion: 2
         x: 30
         y: 198
         width: 46
         height: 76
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5490894, y: 0.3896378}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2123,15 +2013,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_73
+      name: clone_melee_6
       rect:
         serializedVersion: 2
         x: 76
         y: 198
         width: 43
         height: 76
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5195703, y: 0.3896386}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2145,15 +2035,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_74
+      name: clone_melee_5
       rect:
         serializedVersion: 2
         x: 119
         y: 198
         width: 46
         height: 76
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5420771, y: 0.3896388}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2167,15 +2057,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_75
+      name: clone_fall_14
       rect:
         serializedVersion: 2
         x: 256
         y: 274
         width: 36
         height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.42831337, y: 0.5608665}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2189,15 +2079,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_76
+      name: clone_fall_13
       rect:
         serializedVersion: 2
         x: 292
         y: 274
         width: 35
         height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4078308, y: 0.65771145}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2321,15 +2211,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_82
+      name: clone_melee_4
       rect:
         serializedVersion: 2
         x: 165
         y: 198
         width: 43
         height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.50750166, y: 0.49999973}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2343,15 +2233,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_83
+      name: clone_melee_3
       rect:
         serializedVersion: 2
         x: 208
         y: 198
         width: 42
         height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3797949, y: 0.49999794}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2365,15 +2255,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_84
+      name: clone_melee_2
       rect:
         serializedVersion: 2
         x: 250
         y: 198
         width: 40
         height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.39515686, y: 0.4999995}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2387,15 +2277,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_85
+      name: clone_melee_8
       rect:
         serializedVersion: 2
         x: 274
         y: 128
         width: 53
         height: 70
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.61564666, y: 0.42165592}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2409,15 +2299,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_86
+      name: clone_melee_1
       rect:
         serializedVersion: 2
         x: 290
         y: 198
         width: 37
         height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.43025002, y: 0.49999973}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2541,15 +2431,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_92
+      name: clone_melee_13
       rect:
         serializedVersion: 2
         x: 39
         y: 128
         width: 45
         height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5573496, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2563,15 +2453,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_93
+      name: clone_melee_12
       rect:
         serializedVersion: 2
         x: 84
         y: 128
         width: 46
         height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.54909, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2585,15 +2475,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_94
+      name: clone_melee_11
       rect:
         serializedVersion: 2
         x: 130
         y: 128
         width: 44
         height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5293264, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2607,15 +2497,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_95
+      name: clone_melee_10
       rect:
         serializedVersion: 2
         x: 174
         y: 128
         width: 47
         height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5617731, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2651,15 +2541,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clone_sprites_97
+      name: clone_melee_9
       rect:
         serializedVersion: 2
         x: 221
         y: 128
         width: 53
         height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.61564636, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3214,8 +3104,40 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      clone_fall_1: -142605185902894450
+      clone_fall_10: 167424649074004322
+      clone_fall_11: 3242335489369891306
+      clone_fall_12: -335781700450217691
+      clone_fall_13: 7785138679746551633
+      clone_fall_14: 7614343523212101775
+      clone_fall_15: -9115517809915804651
+      clone_fall_16: 5621640017251175737
+      clone_fall_17: -2541124699578759382
+      clone_fall_2: -3003748265655831526
+      clone_fall_3: 7708283044109465906
+      clone_fall_4: 2787097702633497415
+      clone_fall_5: 8290110894319643128
+      clone_fall_6: 338678658848382143
+      clone_fall_7: -9153976029446988032
+      clone_fall_8: -6651131315422635592
+      clone_fall_9: 5446684970068471099
+      clone_melee_1: -4887551473257813090
+      clone_melee_10: 1313823815294239690
+      clone_melee_11: -2928642978372384577
+      clone_melee_12: 5101836903331134443
+      clone_melee_13: 8082508655262673147
+      clone_melee_2: 1485947261676135265
+      clone_melee_3: -7039802509125047576
+      clone_melee_4: 2131084032686580229
+      clone_melee_5: -2840137460955823988
+      clone_melee_6: -7303663827677521523
+      clone_melee_7: 3406071020002120042
+      clone_melee_8: -3715722360665071870
+      clone_melee_9: -16940735526454753
       clone_pull_1: 348155193021792187
       clone_pull_2: 4487188612428203578
+      clone_push_1: 7607574704483768098
+      clone_push_2: 3548583817790801487
       clone_sprites_0: 2333730117565867513
       clone_sprites_1: -6219908465321918838
       clone_sprites_100: 3169945329728126172
@@ -3256,18 +3178,10 @@ TextureImporter:
       clone_sprites_27: 6614800909361626503
       clone_sprites_3: -626386894720416226
       clone_sprites_31: 3040268803179507113
-      clone_sprites_32: 3548583817790801487
       clone_sprites_33: -5741694701398381323
-      clone_sprites_34: -3003748265655831526
-      clone_sprites_36: 7607574704483768098
       clone_sprites_37: -8741181043108055140
-      clone_sprites_38: 338678658848382143
-      clone_sprites_39: 8290110894319643128
-      clone_sprites_40: 2787097702633497415
       clone_sprites_41: -1793384886197647408
-      clone_sprites_42: 7708283044109465906
       clone_sprites_43: -8626598199424356530
-      clone_sprites_44: -142605185902894450
       clone_sprites_45: 3329482186513362161
       clone_sprites_46: -8268258204130959681
       clone_sprites_47: 3656068509172695373
@@ -3278,15 +3192,6 @@ TextureImporter:
       clone_sprites_51: 1399805785555978571
       clone_sprites_52: 4053014468118879878
       clone_sprites_53: 6420460390104502899
-      clone_sprites_54: -335781700450217691
-      clone_sprites_55: 3242335489369891306
-      clone_sprites_56: 167424649074004322
-      clone_sprites_57: -2541124699578759382
-      clone_sprites_58: 5446684970068471099
-      clone_sprites_59: 5621640017251175737
-      clone_sprites_60: -6651131315422635592
-      clone_sprites_61: -9115517809915804651
-      clone_sprites_62: -9153976029446988032
       clone_sprites_63: 606773265675022241
       clone_sprites_64: -7019700372132091783
       clone_sprites_65: 4579810305267719576
@@ -3297,34 +3202,19 @@ TextureImporter:
       clone_sprites_7: -3936585680567594788
       clone_sprites_70: -5870725989084940586
       clone_sprites_71: 1248251583239700023
-      clone_sprites_72: 3406071020002120042
-      clone_sprites_73: -7303663827677521523
-      clone_sprites_74: -2840137460955823988
-      clone_sprites_75: 7614343523212101775
-      clone_sprites_76: 7785138679746551633
       clone_sprites_77: -5968815472364870025
       clone_sprites_78: 6591469120667964549
       clone_sprites_79: -3819916329358111391
       clone_sprites_8: -1600822221574030052
       clone_sprites_80: -9022737897576387959
       clone_sprites_81: -5453011344806215505
-      clone_sprites_82: 2131084032686580229
-      clone_sprites_83: -7039802509125047576
-      clone_sprites_84: 1485947261676135265
-      clone_sprites_85: -3715722360665071870
-      clone_sprites_86: -4887551473257813090
       clone_sprites_87: 4156046893629264428
       clone_sprites_88: -4853359980066564234
       clone_sprites_89: 3533233284574728902
       clone_sprites_9: 1667827789863267363
       clone_sprites_90: -2057685544638397371
       clone_sprites_91: 2961916117270049767
-      clone_sprites_92: 8082508655262673147
-      clone_sprites_93: 5101836903331134443
-      clone_sprites_94: -2928642978372384577
-      clone_sprites_95: 1313823815294239690
       clone_sprites_96: 6115165612346451921
-      clone_sprites_97: -16940735526454753
       clone_sprites_98: -4188540979758240521
       clone_sprites_99: -2433788438267685363
       clone_walking_1: 1816524626923351931

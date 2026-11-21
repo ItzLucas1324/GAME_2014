@@ -2,16 +2,19 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5.0f, jumpForce = 5.0f, sprintMulitplier = 1.8f, doubleTapWindow = 0.3f, backAttackWindow = 0.25f, upAttackWindow = 0.25f, backFlipWindow = 0.25f;
+    [SerializeField] private float moveSpeed = 5.0f, jumpForce = 5.0f, sprintMulitplier = 1.8f, doubleTapWindow = 0.3f, backAttackWindow = 0.25f, upAttackWindow = 0.25f, backFlipWindow = 0.25f, parryTime = 0.3f;
+    [SerializeField] private int maxHealth = 10;
     [SerializeField] GameObject attackHitBox, forceHitBox;
     [SerializeField] Vector2 backAttackColliderPos;
-    private float lastTapTime = -1f, lastTapDirection = 1f, lastBackTapTime = -1f, prevMoveX = 0f, lastUpTapTime = -1f, prevMoveY = 0f, speed;
+    private float lastTapTime = -1f, lastTapDirection = 1f, lastBackTapTime = -1f, prevMoveX = 0f, lastUpTapTime = -1f, prevMoveY = 0f, speed, parryTimer;
     private Vector2 movement;
     private Vector2 frontAttackColliderPos;
-    private bool jumpPressed = false, attackPressed = false, airAttackPressed = false, isGrounded, isSprinting = false, isBlocking = false, blockHeld = false, forceHeld = false, isUsingForce = false, isBackFlipping = false;
+    private bool jumpPressed = false, attackPressed = false, airAttackPressed = false, isGrounded, isSprinting = false, blockHeld = false, forceHeld = false, isUsingForce = false, isBackFlipping = false;
     [System.NonSerialized] public bool isDead = false;
     [System.NonSerialized] public int currentDamage;
-    public int damage = 3;
+    public bool canParry { get; private set; }
+    public bool isBlocking { get; private set; }
+    public int damage = 3, currentHealth;
     Rigidbody2D rb;
     Animator an;
     GameManager gameManager;
@@ -30,6 +33,7 @@ public class PlayerController : MonoBehaviour
         groundFilter.SetNormalAngle(80f, 100f);
 
         currentDamage = damage;
+        currentHealth = maxHealth;
 
         attackHitBox.SetActive(false);
         forceHitBox.SetActive(false);
@@ -43,11 +47,24 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J)) Attack();
         if (Input.GetKeyDown(KeyCode.Space)) Jump();
 
+        bool wasBlocking = isBlocking;
         isBlocking = isGrounded && (blockHeld || Input.GetKey(KeyCode.K));
         an.SetBool("IsBlocking", isBlocking);
 
         isUsingForce = isGrounded && (forceHeld || Input.GetKey(KeyCode.I));
         an.SetBool("IsUsingForce", isUsingForce);
+
+        if (isBlocking && !wasBlocking)
+        {
+            parryTimer = parryTime;
+        }
+
+        if (parryTimer > 0)
+        {
+            parryTimer -= Time.deltaTime;
+        }
+
+        canParry = isBlocking && parryTimer > 0;
 
         if (moveX != 0 && prevMoveX == 0)
         {
@@ -77,10 +94,13 @@ public class PlayerController : MonoBehaviour
             isSprinting = false;
         }
 
-        bool inBackAttack = an.GetCurrentAnimatorStateInfo(0).IsName("PlayerBackAttack");
-        bool inUpAttack = an.GetCurrentAnimatorStateInfo(0).IsName("PlayerUpAttack");
+        var currentState = an.GetCurrentAnimatorStateInfo(0);
+        bool inBackAttack = currentState.IsName("PlayerBackAttack");
+        bool inUpAttack = currentState.IsName("PlayerUpAttack");
+        bool inForceAction = currentState.IsName("PlayerForcePush") || currentState.IsName("PlayerForcePull")
+            || currentState.IsName("PlayerForceLightning");
 
-        if (!inBackAttack && !isUsingForce && !isBackFlipping)
+        if (!inBackAttack && !isUsingForce && !isBackFlipping && !inForceAction)
         {
             if (moveX < 0)
             {
@@ -95,10 +115,6 @@ public class PlayerController : MonoBehaviour
         // Force Stuff
         if (isUsingForce)
         {
-            var forceState = an.GetCurrentAnimatorStateInfo(0);
-            bool inForceAction = forceState.IsName("PlayerForcePush") || forceState.IsName("PlayerForcePull")
-                || forceState.IsName("PlayerForceLightning");
-
             if (moveX != 0 && prevMoveX == 0)
             {
                 if (!inForceAction)
@@ -142,7 +158,7 @@ public class PlayerController : MonoBehaviour
         // Attack Stuff
         if (attackPressed)
         {
-            if (isGrounded && !isBlocking && !isUsingForce && !isBackFlipping)
+            if (isGrounded && !isBlocking && !isUsingForce && !isBackFlipping && !inForceAction)
             {
                 if (!inBackAttack && !inUpAttack)
                 {
@@ -180,7 +196,7 @@ public class PlayerController : MonoBehaviour
                     }
                 }
             }
-            else
+            else if (!isGrounded)
             {
                 airAttackPressed = true;
             }
@@ -190,13 +206,8 @@ public class PlayerController : MonoBehaviour
 
         if (transform.position.y < -20f)
         {
-            isDead = true;
-
-            if (isDead)
-            {
-                gameManager.GameOver();
-                gameObject.SetActive(false);
-            }
+            Died();
+            gameObject.SetActive(false);
         }
     }
 
@@ -222,7 +233,9 @@ public class PlayerController : MonoBehaviour
 
         var state = an.GetCurrentAnimatorStateInfo(0);
         if (state.IsName("PlayerAttack1") || state.IsName("PlayerAttack2") || state.IsName("PlayerAttack3") || state.IsName("PlayerFallAttack") 
-            || state.IsName("PlayerBackAttack") || state.IsName("PlayerUpAttack") || isBlocking || isUsingForce)
+            || state.IsName("PlayerBackAttack") || state.IsName("PlayerUpAttack")
+            || state.IsName("PlayerForcePush") || state.IsName("PlayerForcePull") || state.IsName("PlayerForceLightning") 
+            || isBlocking || isUsingForce)
         {
             rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
             return;
@@ -270,6 +283,39 @@ public class PlayerController : MonoBehaviour
 
         jumpPressed = true;
         an.SetBool("IsJumping", true);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        bool inFront = Mathf.Sign(collision.transform.position.x - transform.position.x) == Mathf.Sign(transform.right.x);
+
+        if (collision.gameObject.CompareTag("EnemyBullet"))
+        {
+            if (inFront && isBlocking)
+                return;
+
+            TakeDamage(1);
+        }
+    }
+
+    public void TakeDamage(int amount)
+    {
+        if (isDead)
+            return;
+
+        currentHealth -= amount;
+        Debug.Log("Player Health: " + currentHealth);
+
+        if (currentHealth <= 0)
+        {
+            Died();
+        }
+    }
+
+    private void Died()
+    {
+        isDead = true;
+        gameManager.GameOver();
     }
 
     public void Attack()
