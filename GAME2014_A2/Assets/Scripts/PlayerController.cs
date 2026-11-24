@@ -1,17 +1,19 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5.0f, jumpForce = 5.0f, sprintMulitplier = 1.8f, doubleTapWindow = 0.3f, backAttackWindow = 0.25f, upAttackWindow = 0.25f, backFlipWindow = 0.25f, parryTime = 0.3f;
-    [SerializeField] private int maxHealth = 10;
+    [SerializeField] private int maxHealth = 10, maxForce = 10;
     [SerializeField] GameObject attackHitBox, forceHitBox;
+    [SerializeField] Slider healthBar, forceMeter;
     [SerializeField] Vector2 backAttackColliderPos;
     private float lastTapTime = -1f, lastTapDirection = 1f, lastBackTapTime = -1f, prevMoveX = 0f, lastUpTapTime = -1f, prevMoveY = 0f, speed, parryTimer;
     private Vector2 movement;
     private Vector2 frontAttackColliderPos;
     private bool jumpPressed = false, attackPressed = false, airAttackPressed = false, isGrounded, isSprinting = false, blockHeld = false, forceHeld = false, isUsingForce = false, isBackFlipping = false;
     [System.NonSerialized] public bool isDead = false;
-    [System.NonSerialized] public int currentDamage, currentHealth;
+    [System.NonSerialized] public int currentDamage, currentHealth, currentForce;
     public bool canParry { get; private set; }
     public bool isBlocking { get; private set; }
     public int damage = 3;
@@ -34,6 +36,13 @@ public class PlayerController : MonoBehaviour
 
         currentDamage = damage;
         currentHealth = maxHealth;
+        currentForce = maxForce;
+
+        healthBar.maxValue = maxHealth;
+        healthBar.value = currentHealth;
+
+        forceMeter.maxValue = maxForce;
+        forceMeter.value = currentForce;
 
         attackHitBox.SetActive(false);
         forceHitBox.SetActive(false);
@@ -116,21 +125,29 @@ public class PlayerController : MonoBehaviour
         }
 
         // Force Stuff
-        if (isUsingForce)
+        if (isUsingForce && currentForce > 0)
         {
+            int cost;
+
             if (moveX != 0 && prevMoveX == 0)
             {
                 if (!inForceAction)
                 {
+                    cost = 2;
+                    if (currentForce < cost) return;
+
                     if (Mathf.Sign(moveX) == Mathf.Sign(transform.right.x))
                     {
+                        
                         an.Play("PlayerForcePush");
                         forceScript.SetForceMode(ForceScript.ForceMode.ForcePush);
+                        currentForce -= cost;
                     }
                     else
                     {
                         an.Play("PlayerForcePull");
                         forceScript.SetForceMode(ForceScript.ForceMode.ForcePull);
+                        currentForce -= cost;
                     }
                 }
             }
@@ -141,12 +158,16 @@ public class PlayerController : MonoBehaviour
                 {
                     if (Mathf.Sign(moveY) == Mathf.Sign(transform.up.y))
                     {
+                        cost = 4;
+                        if (currentForce < cost) return;
                         an.Play("PlayerForceLightning");
                         forceScript.SetForceMode(ForceScript.ForceMode.ForceLightning);
+                        currentForce -= cost;
                     }
                 }
             }
 
+            forceMeter.value = currentForce;
             lastBackTapTime = -1f;
         }
 
@@ -210,6 +231,7 @@ public class PlayerController : MonoBehaviour
         if (transform.position.y < -20f)
         {
             Died();
+            Invoke("GameOverScreen", 1f);
             gameObject.SetActive(false);
         }
     }
@@ -232,6 +254,12 @@ public class PlayerController : MonoBehaviour
                 currentDamage += 1;
                 airAttackPressed = false;
             }
+        }
+
+        if (isDead)
+        {
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+            return;
         }
 
         var state = an.GetCurrentAnimatorStateInfo(0);
@@ -307,6 +335,7 @@ public class PlayerController : MonoBehaviour
             return;
 
         currentHealth -= amount;
+        healthBar.value = currentHealth;
         Debug.Log("Player Health: " + currentHealth);
 
         if (currentHealth <= 0)
@@ -318,12 +347,18 @@ public class PlayerController : MonoBehaviour
     private void Died()
     {
         isDead = true;
+        rb.linearVelocity  = new Vector2(0f, rb.linearVelocity.y);
 
         if (isGrounded)
         {
             an.SetTrigger("IsDead");
-            //gameManager.GameOver();
+            Invoke("GameOverScreen", 2f);
         }
+    }
+
+    private void GameOverScreen()
+    {
+        gameManager.GameOver();
     }
 
     public void Attack()

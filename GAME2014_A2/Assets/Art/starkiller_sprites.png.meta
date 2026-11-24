@@ -2197,7 +2197,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: starkiller_sprites_0
+      name: starkiller_Face_1
       rect:
         serializedVersion: 2
         x: 4
@@ -2219,7 +2219,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_1
+      name: starkiller_Face_2
       rect:
         serializedVersion: 2
         x: 48
@@ -16180,6 +16180,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      starkiller_Face_1: 8243916493251317329
+      starkiller_Face_2: 2516991433669724427
       starkiller_attack1_1: -449998253266120752
       starkiller_attack1_2: -6807833586948323209
       starkiller_attack1_3: -6397846613423543249
@@ -16332,8 +16334,6 @@ TextureImporter:
       starkiller_sprint_7: -7611353847082387754
       starkiller_sprint_8: -8264046831181795426
       starkiller_sprint_9: -8128734708898437521
-      starkiller_sprites_0: 8243916493251317329
-      starkiller_sprites_1: 2516991433669724427
       starkiller_sprites_10: 6636555237372603422
       starkiller_sprites_100: 5193784572944120
       starkiller_sprites_11: 8704304186031630035
