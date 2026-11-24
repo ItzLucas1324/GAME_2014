@@ -5189,15 +5189,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_169
+      name: starkiller_death_1
       rect:
         serializedVersion: 2
         x: 149
         y: 2691
         width: 36
         height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5090421, y: 0.5472491}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5211,15 +5211,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_170
+      name: starkiller_death_2
       rect:
         serializedVersion: 2
         x: 188
         y: 2691
         width: 39
         height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5500813, y: 0.5650757}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5233,15 +5233,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_171
+      name: starkiller_death_3
       rect:
         serializedVersion: 2
         x: 234
-        y: 2700
-        width: 34
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 2691
+        width: 38
+        height: 54
+      alignment: 9
+      pivot: {x: 0.5685356, y: 0.62657785}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5255,37 +5255,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_172
-      rect:
-        serializedVersion: 2
-        x: 239
-        y: 2691
-        width: 34
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ef5eb004d8cce30d0800000000000000
-      internalID: -3441088158227503618
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: starkiller_sprites_173
+      name: starkiller_death_4
       rect:
         serializedVersion: 2
         x: 280
         y: 2691
         width: 39
         height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5584326, y: 0.67578125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5299,15 +5277,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_174
+      name: starkiller_death_5
       rect:
         serializedVersion: 2
         x: 336
-        y: 2691
+        y: 2692
         width: 40
         height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.51627576, y: 0.64042395}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5321,15 +5299,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_175
+      name: starkiller_death_6
       rect:
         serializedVersion: 2
         x: 384
         y: 2691
         width: 43
         height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.552992, y: 0.70344543}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5343,15 +5321,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_176
+      name: starkiller_death_7
       rect:
         serializedVersion: 2
         x: 435
         y: 2691
         width: 42
         height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.523245, y: 0.8254871}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5365,15 +5343,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_177
+      name: starkiller_death_8
       rect:
         serializedVersion: 2
         x: 494
         y: 2691
         width: 45
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 38
+      alignment: 9
+      pivot: {x: 0.50722927, y: 0.8915309}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5387,15 +5365,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_178
+      name: starkiller_death_9
       rect:
         serializedVersion: 2
         x: 551
         y: 2691
         width: 50
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5325513, y: 0.8914281}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5409,15 +5387,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_179
+      name: starkiller_death_10
       rect:
         serializedVersion: 2
         x: 609
         y: 2691
         width: 50
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5520752, y: 0.8913703}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5431,15 +5409,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_180
+      name: starkiller_death_11
       rect:
         serializedVersion: 2
         x: 664
         y: 2691
         width: 52
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5325482, y: 0.891396}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5453,15 +5431,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_181
+      name: starkiller_death_12
       rect:
         serializedVersion: 2
         x: 719
         y: 2691
         width: 54
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 38
+      alignment: 9
+      pivot: {x: 0.51445854, y: 0.891396}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5475,15 +5453,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_182
+      name: starkiller_death_13
       rect:
         serializedVersion: 2
-        x: 779
+        x: 780
         y: 2691
         width: 54
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 38
+      alignment: 9
+      pivot: {x: 0.4782839, y: 0.8828254}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5497,15 +5475,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_183
+      name: starkiller_death_14
       rect:
         serializedVersion: 2
         x: 839
         y: 2691
         width: 55
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 38
+      alignment: 9
+      pivot: {x: 0.50294966, y: 0.88283175}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5519,15 +5497,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: starkiller_sprites_184
+      name: starkiller_death_15
       rect:
         serializedVersion: 2
         x: 900
         y: 2692
         width: 55
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5029397, y: 0.9091995}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -16246,6 +16224,21 @@ TextureImporter:
       starkiller_block_1: -3203023634039571804
       starkiller_block_2: 2080609486344949329
       starkiller_block_3: 7486953466665577038
+      starkiller_death_1: -1904929794964069440
+      starkiller_death_10: 2692328709791212143
+      starkiller_death_11: -8941805107381605772
+      starkiller_death_12: -92195189663676494
+      starkiller_death_13: 8736246306711549978
+      starkiller_death_14: -1387952420221808293
+      starkiller_death_15: -9125935390173602120
+      starkiller_death_2: 843972262143946945
+      starkiller_death_3: -3514551655980904474
+      starkiller_death_4: 805961178605980535
+      starkiller_death_5: -7571518128595906097
+      starkiller_death_6: -3005710627943298291
+      starkiller_death_7: 7782540773957983667
+      starkiller_death_8: -648686739259041089
+      starkiller_death_9: 8609755076103823083
       starkiller_fall_1: -4090185515428935723
       starkiller_fall_2: -638340594688853932
       starkiller_fall_3: -2002335972006855991
@@ -16386,24 +16379,9 @@ TextureImporter:
       starkiller_sprites_166: -2395292895977030456
       starkiller_sprites_167: -6137830356231379191
       starkiller_sprites_168: -9068277203927741837
-      starkiller_sprites_169: -1904929794964069440
       starkiller_sprites_17: 5614283597211376321
-      starkiller_sprites_170: 843972262143946945
-      starkiller_sprites_171: -3514551655980904474
       starkiller_sprites_172: -3441088158227503618
-      starkiller_sprites_173: 805961178605980535
-      starkiller_sprites_174: -7571518128595906097
-      starkiller_sprites_175: -3005710627943298291
-      starkiller_sprites_176: 7782540773957983667
-      starkiller_sprites_177: -648686739259041089
-      starkiller_sprites_178: 8609755076103823083
-      starkiller_sprites_179: 2692328709791212143
       starkiller_sprites_18: -8336602462708377962
-      starkiller_sprites_180: -8941805107381605772
-      starkiller_sprites_181: -92195189663676494
-      starkiller_sprites_182: 8736246306711549978
-      starkiller_sprites_183: -1387952420221808293
-      starkiller_sprites_184: -9125935390173602120
       starkiller_sprites_19: -5694444730975635878
       starkiller_sprites_195: 2854369862104404058
       starkiller_sprites_196: 6386822219577843454

@@ -11,10 +11,10 @@ public class PlayerController : MonoBehaviour
     private Vector2 frontAttackColliderPos;
     private bool jumpPressed = false, attackPressed = false, airAttackPressed = false, isGrounded, isSprinting = false, blockHeld = false, forceHeld = false, isUsingForce = false, isBackFlipping = false;
     [System.NonSerialized] public bool isDead = false;
-    [System.NonSerialized] public int currentDamage;
+    [System.NonSerialized] public int currentDamage, currentHealth;
     public bool canParry { get; private set; }
     public bool isBlocking { get; private set; }
-    public int damage = 3, currentHealth;
+    public int damage = 3;
     Rigidbody2D rb;
     Animator an;
     GameManager gameManager;
@@ -46,6 +46,9 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.J)) Attack();
         if (Input.GetKeyDown(KeyCode.Space)) Jump();
+
+        if (isDead)
+            return;
 
         bool wasBlocking = isBlocking;
         isBlocking = isGrounded && (blockHeld || Input.GetKey(KeyCode.K));
@@ -262,7 +265,7 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
-        if (!isGrounded || isBlocking || isUsingForce)
+        if (!isGrounded || isBlocking || isUsingForce || isDead)
             return;
 
         if (Time.time - lastBackTapTime <= backFlipWindow)
@@ -315,7 +318,12 @@ public class PlayerController : MonoBehaviour
     private void Died()
     {
         isDead = true;
-        gameManager.GameOver();
+
+        if (isGrounded)
+        {
+            an.SetTrigger("IsDead");
+            //gameManager.GameOver();
+        }
     }
 
     public void Attack()
