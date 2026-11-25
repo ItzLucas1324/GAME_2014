@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] GameObject gameUI, gameOverParent;
+    [SerializeField] GameObject gameUI, gameOverParent, levelCompleteParent;
     [SerializeField] Transform victoryPoint, exitDoor;
     [SerializeField] Collider2D enemyZone;
     [SerializeField] float victoryTriggerDistance = 0.5f, victoryPauseTime, victoryAnimTime = 1.5f;
@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
         }
 
         EnemiesRemaining();
-        Debug.Log("Exit unlocked: " + exitUnlocked);
     }
 
     public void UnlockExit()
@@ -88,6 +87,7 @@ public class GameManager : MonoBehaviour
     private void LevelComplete()
     {
         gameUI.SetActive(false);
+        levelCompleteParent.SetActive(true);
     }
 
     public void GameOver()

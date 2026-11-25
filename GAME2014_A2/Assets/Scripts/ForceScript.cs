@@ -25,11 +25,6 @@ public class ForceScript : MonoBehaviour
         regularOffset = new Vector2(boxCol.offset.x, boxCol.offset.y);
     }
 
-    void Update()
-    {
-        
-    }
-
     public void SetForceMode(ForceMode forceMode)
     {
         mode = forceMode;

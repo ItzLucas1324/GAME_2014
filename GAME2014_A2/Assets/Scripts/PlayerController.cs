@@ -443,8 +443,6 @@ public class PlayerController : MonoBehaviour
         an.SetBool("IsSprinting", false);
         an.SetBool("IsBlocking", false);
         an.SetBool("IsUsingForce", false);
-
-        Debug.Log("Player Dead");
     }
 
     private void GameOverScreen()
