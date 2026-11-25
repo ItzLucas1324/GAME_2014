@@ -8,10 +8,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject attackHitBox, forceHitBox;
     [SerializeField] Slider healthBar, forceMeter;
     [SerializeField] Vector2 backAttackColliderPos;
-    private float lastTapTime = -1f, lastTapDirection = 1f, lastBackTapTime = -1f, prevMoveX = 0f, lastUpTapTime = -1f, prevMoveY = 0f, speed, parryTimer;
+    private float lastTapTime = -1f, lastTapDirection = 1f, lastBackTapTime = -1f, prevMoveX = 0f, lastUpTapTime = -1f, prevMoveY = 0f, speed, parryTimer, autoRunDirection = 0f;
     private Vector2 movement;
     private Vector2 frontAttackColliderPos;
-    private bool jumpPressed = false, attackPressed = false, airAttackPressed = false, isGrounded, isSprinting = false, blockHeld = false, forceHeld = false, isUsingForce = false, isBackFlipping = false;
+    private bool jumpPressed = false, attackPressed = false, airAttackPressed = false, isGrounded, isSprinting = false, blockHeld = false, forceHeld = false, isUsingForce = false, isBackFlipping = false, controlIsLocked = false;
     [System.NonSerialized] public bool isDead = false;
     [System.NonSerialized] public int currentDamage, currentHealth, currentForce;
     public bool canParry { get; private set; }
@@ -57,6 +57,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)) Jump();
 
         if (isDead)
+            return;
+
+        if (controlIsLocked)
             return;
 
         bool wasBlocking = isBlocking;
@@ -138,7 +141,7 @@ public class PlayerController : MonoBehaviour
 
                     if (Mathf.Sign(moveX) == Mathf.Sign(transform.right.x))
                     {
-                        
+
                         an.Play("PlayerForcePush");
                         forceScript.SetForceMode(ForceScript.ForceMode.ForcePush);
                         currentForce -= cost;
@@ -256,6 +259,12 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        if (controlIsLocked)
+        {
+            rb.linearVelocity = new Vector2(autoRunDirection * moveSpeed * sprintMulitplier, rb.linearVelocity.y);
+            return;
+        }
+
         if (isDead)
         {
             rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
@@ -263,9 +272,9 @@ public class PlayerController : MonoBehaviour
         }
 
         var state = an.GetCurrentAnimatorStateInfo(0);
-        if (state.IsName("PlayerAttack1") || state.IsName("PlayerAttack2") || state.IsName("PlayerAttack3") || state.IsName("PlayerFallAttack") 
+        if (state.IsName("PlayerAttack1") || state.IsName("PlayerAttack2") || state.IsName("PlayerAttack3") || state.IsName("PlayerFallAttack")
             || state.IsName("PlayerBackAttack") || state.IsName("PlayerUpAttack")
-            || state.IsName("PlayerForcePush") || state.IsName("PlayerForcePull") || state.IsName("PlayerForceLightning") 
+            || state.IsName("PlayerForcePush") || state.IsName("PlayerForcePull") || state.IsName("PlayerForceLightning")
             || isBlocking || isUsingForce)
         {
             rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
@@ -283,7 +292,7 @@ public class PlayerController : MonoBehaviour
 
         rb.linearVelocity = new Vector2(movement.x * speed, rb.linearVelocity.y);
 
-        if (jumpPressed )
+        if (jumpPressed)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
@@ -293,7 +302,7 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
-        if (!isGrounded || isBlocking || isUsingForce || isDead)
+        if (!isGrounded || isBlocking || isUsingForce || isDead || controlIsLocked)
             return;
 
         if (Time.time - lastBackTapTime <= backFlipWindow)
@@ -316,6 +325,47 @@ public class PlayerController : MonoBehaviour
         an.SetBool("IsJumping", true);
     }
 
+    public void LockControls()
+    {
+        controlIsLocked = true;
+        autoRunDirection = 0f;
+        movement = Vector2.zero;
+        isSprinting = false;
+        isBlocking = false;
+        isUsingForce = false;
+
+        an.SetBool("IsWalking", false);
+        an.SetBool("IsSprinting", false);
+        an.SetBool("IsBlocking", false);
+        an.SetBool("IsUsingForce", false);
+        
+        attackHitBox.SetActive(false);
+        forceHitBox.SetActive(false);
+    }
+
+    public void PlayerVictory()
+    {
+        an.Play("PlayerVictory");
+    }
+
+    public void AutoRun(float direction)
+    {
+        autoRunDirection = direction;
+
+        if (direction < 0)
+        {
+            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        }
+
+        an.SetBool("IsWalking", true);
+        an.SetBool("IsSprinting", true);
+        an.Play("PlayerSprint");
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         bool inFront = Mathf.Sign(collision.transform.position.x - transform.position.x) == Mathf.Sign(transform.right.x);
@@ -331,7 +381,7 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        if (isDead)
+        if (isDead || controlIsLocked)
             return;
 
         currentHealth -= amount;
@@ -347,7 +397,7 @@ public class PlayerController : MonoBehaviour
     private void Died()
     {
         isDead = true;
-        rb.linearVelocity  = new Vector2(0f, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
 
         if (isGrounded)
         {

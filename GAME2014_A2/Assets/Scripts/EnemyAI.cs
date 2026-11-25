@@ -94,7 +94,12 @@ public class EnemyAI : MonoBehaviour
 
         if (isPlayerInSight)
         {
-            direction = Mathf.Sign(target);
+            bool inMelee = an.GetCurrentAnimatorStateInfo(0).IsName("CloneMelee");
+
+            if (!inMelee)
+            {
+                direction = Mathf.Sign(target);
+            }
 
             bool groundAhead = true;
 
@@ -109,10 +114,9 @@ public class EnemyAI : MonoBehaviour
 
             if (Mathf.Abs(target) <= stopDistance)
             {
-                bool inMelee = an.GetCurrentAnimatorStateInfo(0).IsName("CloneMelee");
-
                 if (!isHit && !inMelee && meleeTimer <= 0)
                 {
+                    rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
                     an.Play("CloneMelee");
                     meleeTimer = meleeCooldown;
                 }
@@ -121,7 +125,7 @@ public class EnemyAI : MonoBehaviour
             {
                 bool inShoot = an.GetCurrentAnimatorStateInfo(0).IsName("CloneShooting");
 
-                if (!inShoot && !isHit)
+                if (!inShoot && !inMelee && !isHit)
                 {
                     stopTimer -= Time.fixedDeltaTime;
 
