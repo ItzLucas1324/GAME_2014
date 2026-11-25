@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,14 +7,17 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject gameUI, gameOverParent;
     [SerializeField] Transform victoryPoint, exitDoor;
+    [SerializeField] Collider2D enemyZone;
     [SerializeField] float victoryTriggerDistance = 0.5f, victoryPauseTime, victoryAnimTime = 1.5f;
     PlayerController player;
-
-    private bool exitUnlocked = false, victoryStarted = false;
+    GeneratorOneScript generator;
+    [System.NonSerialized] public bool exitUnlocked = false;
+    private bool victoryStarted = false;
 
     void Start()
     {
         player = FindAnyObjectByType<PlayerController>();
+        generator = FindAnyObjectByType<GeneratorOneScript>();
     }
 
     void Update()
@@ -22,12 +26,16 @@ public class GameManager : MonoBehaviour
         {
             float distance = Mathf.Abs(player.transform.position.x - victoryPoint.position.x);
 
-            if (distance <= victoryTriggerDistance)
+            if (distance <= victoryTriggerDistance && !EnemiesRemaining())
             {
+                generator.OpenDoor();
                 victoryStarted = true;
                 StartCoroutine(VictorySequence());
             }
         }
+
+        EnemiesRemaining();
+        Debug.Log("Exit unlocked: " + exitUnlocked);
     }
 
     public void UnlockExit()
@@ -56,6 +64,25 @@ public class GameManager : MonoBehaviour
         player.gameObject.SetActive(false);
         yield return new WaitForSeconds(0.5f);
         LevelComplete();
+    }
+
+    public bool EnemiesRemaining()
+    {
+        List<Collider2D> results = new List<Collider2D>();
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.useTriggers = false;
+
+        enemyZone.Overlap(filter, results);
+
+        foreach (Collider2D col in results)
+        {
+            if (col.CompareTag("Enemy"))
+            {
+                return true;
+            }
+        }
+
+        return false; 
     }
 
     private void LevelComplete()

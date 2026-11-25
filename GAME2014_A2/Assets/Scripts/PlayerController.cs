@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private float lastTapTime = -1f, lastTapDirection = 1f, lastBackTapTime = -1f, prevMoveX = 0f, lastUpTapTime = -1f, prevMoveY = 0f, speed, parryTimer, autoRunDirection = 0f;
     private Vector2 movement;
     private Vector2 frontAttackColliderPos;
-    private bool jumpPressed = false, attackPressed = false, airAttackPressed = false, isGrounded, isSprinting = false, blockHeld = false, forceHeld = false, isUsingForce = false, isBackFlipping = false, controlIsLocked = false;
+    private bool jumpPressed = false, attackPressed = false, airAttackPressed = false, isGrounded, isSprinting = false, blockHeld = false, forceHeld = false, isUsingForce = false, isBackFlipping = false, controlIsLocked = false, deathHandled = false;
     [System.NonSerialized] public bool isDead = false;
     [System.NonSerialized] public int currentDamage, currentHealth, currentForce;
     public bool canParry { get; private set; }
@@ -57,7 +57,18 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)) Jump();
 
         if (isDead)
+        {
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+
+            if (isGrounded && !deathHandled)
+            {
+                deathHandled = true;
+                an.SetTrigger("IsDead");
+                Invoke("GameOverScreen", 2f);
+            }
+
             return;
+        }
 
         if (controlIsLocked)
             return;
@@ -377,6 +388,36 @@ public class PlayerController : MonoBehaviour
 
             TakeDamage(1);
         }
+
+        if (collision.CompareTag("Health"))
+        {
+            if (currentHealth == maxHealth)
+                return;
+
+            currentHealth += 3;
+
+            if (currentHealth >= maxHealth)
+                currentHealth = maxHealth;
+
+            healthBar.value = currentHealth;
+
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.CompareTag("Force"))
+        {
+            if (currentForce == maxForce)
+                return;
+
+            currentForce += 3;
+
+            if (currentForce >= maxForce)
+                currentForce = maxForce;
+
+            forceMeter.value = currentForce;
+
+            Destroy(collision.gameObject);
+        }
     }
 
     public void TakeDamage(int amount)
@@ -386,7 +427,6 @@ public class PlayerController : MonoBehaviour
 
         currentHealth -= amount;
         healthBar.value = currentHealth;
-        Debug.Log("Player Health: " + currentHealth);
 
         if (currentHealth <= 0)
         {
@@ -399,11 +439,12 @@ public class PlayerController : MonoBehaviour
         isDead = true;
         rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
 
-        if (isGrounded)
-        {
-            an.SetTrigger("IsDead");
-            Invoke("GameOverScreen", 2f);
-        }
+        an.SetBool("IsWalking", false);
+        an.SetBool("IsSprinting", false);
+        an.SetBool("IsBlocking", false);
+        an.SetBool("IsUsingForce", false);
+
+        Debug.Log("Player Dead");
     }
 
     private void GameOverScreen()

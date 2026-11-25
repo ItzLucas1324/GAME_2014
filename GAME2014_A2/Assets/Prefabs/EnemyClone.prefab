@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5895112218707737552}
   m_Layer: 0
   m_Name: EnemyClone
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,6 +188,8 @@ MonoBehaviour:
     m_Bits: 64
   projectilePrefab: {fileID: 4110019444422025876, guid: ede0f628ef2819742a1f3af90159d7a2, type: 3}
   meleeHitBox: {fileID: 7361256004037608761}
+  healthPickup: {fileID: 242902161693157887, guid: 1b7dff6485d97cf4686267f0abbf031c, type: 3}
+  forcePickup: {fileID: 134599979757101732, guid: 4d3654d95a048b5469629da2d2754566, type: 3}
   projectileSpawn: {fileID: 2367285371117958741}
 --- !u!95 &5895112218707737552
 Animator:

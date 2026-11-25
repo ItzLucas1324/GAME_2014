@@ -5,12 +5,14 @@ public class GeneratorOneScript : MonoBehaviour
     [SerializeField] GameObject exitDoor, explosion;
     [SerializeField] private int generatorHealth = 4;
     GameObject explosionInst;
+    GameManager gameManager;
     Animator an;
-    private bool generatorDestroyed = false;
+    [System.NonSerialized] public bool generatorDestroyed = false;
 
     private void Start()
     {
         an = GetComponent<Animator>();
+        gameManager = FindAnyObjectByType<GameManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,6 +27,7 @@ public class GeneratorOneScript : MonoBehaviour
             if (generatorHealth <= 0)
             {
                 generatorDestroyed = true;
+                gameManager.exitUnlocked = generatorDestroyed;
 
                 explosionInst = Instantiate(explosion, transform.position, Quaternion.identity);
                 Animator expAnimator = explosionInst.GetComponent<Animator>();
@@ -32,14 +35,11 @@ public class GeneratorOneScript : MonoBehaviour
                 Destroy(explosionInst, expLength);
                 
                 an.SetBool("IsDestroyed", generatorDestroyed);
-                OpenDoor();
             }
-
-            Debug.Log("Generator Health: " + generatorHealth);
         }
     }
 
-    private void OpenDoor()
+    public void OpenDoor()
     {
         BoxCollider2D doorCollider = exitDoor.GetComponent<BoxCollider2D>();
         doorCollider.enabled = false;

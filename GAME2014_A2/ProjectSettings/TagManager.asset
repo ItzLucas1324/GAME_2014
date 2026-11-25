@@ -9,6 +9,8 @@ TagManager:
   - PlayerForce
   - Enemy
   - EnemyBullet
+  - Health
+  - Force
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Ground
   - Player
   - EnemyAttack
-  - 
+  - Environment
   - 
   - 
   - 

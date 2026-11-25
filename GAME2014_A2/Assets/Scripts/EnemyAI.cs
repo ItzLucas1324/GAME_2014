@@ -6,7 +6,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float moveSpeed = 2f, ledgeCheckDistance = 0.5f, playerAgroDistance = 5f, stopDistance = 1f, hitStunTime = 0.5f, forceKnockbackSpeed = 6f, meleeCooldown = 1f, spriteFadeRate = 1f;
     [SerializeField] private int maxHealth = 10;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] GameObject projectilePrefab, meleeHitBox;
+    [SerializeField] GameObject projectilePrefab, meleeHitBox, healthPickup, forcePickup;
     [SerializeField] Transform projectileSpawn;
     private float direction = 1f, stopTimer, shootTimer, hitTimer, meleeTimer;
     private int currentHealth;
@@ -221,8 +221,6 @@ public class EnemyAI : MonoBehaviour
             isDead = true;
             rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
         }
-
-        //Debug.Log("Damage Taken: " + currentHealth);
     }
 
     public void Shoot()
@@ -234,6 +232,19 @@ public class EnemyAI : MonoBehaviour
     public void Dead()
     {
         rb.simulated = false;
+
+        int randomNum;
+        randomNum = Random.Range(0, 101);
+
+        if (randomNum >= 0 && randomNum <= 25)
+        {
+            GameObject healthInst = Instantiate(healthPickup, transform.position, Quaternion.identity);
+        }
+        else if (randomNum > 25 && randomNum <= 50)
+        {
+            GameObject forceInst = Instantiate(forcePickup, transform.position, Quaternion.identity);
+        }
+
         StartCoroutine(FadeOut());
     }
 
