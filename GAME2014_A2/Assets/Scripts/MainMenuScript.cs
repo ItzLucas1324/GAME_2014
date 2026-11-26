@@ -11,6 +11,6 @@ public class MainMenuScript : MonoBehaviour
 
     public void ChangeToGameScene()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("Level1");
     }
 }

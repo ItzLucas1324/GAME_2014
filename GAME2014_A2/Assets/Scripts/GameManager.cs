@@ -13,11 +13,13 @@ public class GameManager : MonoBehaviour
     GeneratorOneScript generator;
     [System.NonSerialized] public bool exitUnlocked = false;
     private bool victoryStarted = false;
+    Scene currentScene;
 
     void Start()
     {
         player = FindAnyObjectByType<PlayerController>();
         generator = FindAnyObjectByType<GeneratorOneScript>();
+        currentScene = SceneManager.GetActiveScene();
     }
 
     void Update()
@@ -96,9 +98,14 @@ public class GameManager : MonoBehaviour
         gameOverParent.SetActive(true);
     }
 
-    public void RestartGame()
+    public void RestartLevel()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene(currentScene.name);
+    }
+
+    public void LoadNextLevel()
+    {
+        SceneManager.LoadScene(currentScene.buildIndex + 1);
     }
 
     public void BackToMainMenu()
