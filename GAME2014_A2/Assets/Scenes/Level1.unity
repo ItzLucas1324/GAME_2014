@@ -31409,11 +31409,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8840116976129256544, guid: 7eeeae501aa88324fa2c7a975f6988f5, type: 3}
   m_PrefabInstance: {fileID: 1324465721}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1327190273 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4190903628321829788, guid: feffd919b7f9d0441ad347a35e7c3b78, type: 3}
-  m_PrefabInstance: {fileID: 381409284626289422}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1331366346
 GameObject:
   m_ObjectHideFlags: 0
@@ -32095,11 +32090,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550883753}
   m_CullTransparentMesh: 1
---- !u!1 &1615885000 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 217642100163598956, guid: feffd919b7f9d0441ad347a35e7c3b78, type: 3}
-  m_PrefabInstance: {fileID: 381409284626289422}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1630591645
 GameObject:
   m_ObjectHideFlags: 0
@@ -46969,10 +46959,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1865024505959430714, guid: feffd919b7f9d0441ad347a35e7c3b78, type: 3}
-      propertyPath: m_SleepingMode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5690204567894837073, guid: feffd919b7f9d0441ad347a35e7c3b78, type: 3}
       propertyPath: healthBar
       value: 
@@ -46981,29 +46967,17 @@ PrefabInstance:
       propertyPath: forceMeter
       value: 
       objectReference: {fileID: 1873128123}
-    - target: {fileID: 5690204567894837073, guid: feffd919b7f9d0441ad347a35e7c3b78, type: 3}
-      propertyPath: forceHitBox
-      value: 
-      objectReference: {fileID: 1615885000}
-    - target: {fileID: 5690204567894837073, guid: feffd919b7f9d0441ad347a35e7c3b78, type: 3}
-      propertyPath: attackHitBox
-      value: 
-      objectReference: {fileID: 1327190273}
-    - target: {fileID: 5690204567894837073, guid: feffd919b7f9d0441ad347a35e7c3b78, type: 3}
-      propertyPath: backAttackColliderPos.x
-      value: -0.429
-      objectReference: {fileID: 0}
     - target: {fileID: 6101786358516601888, guid: feffd919b7f9d0441ad347a35e7c3b78, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6101786358516601888, guid: feffd919b7f9d0441ad347a35e7c3b78, type: 3}
-      propertyPath: m_Layer
-      value: 7
+    - target: {fileID: 8138899698116253831, guid: feffd919b7f9d0441ad347a35e7c3b78, type: 3}
+      propertyPath: m_Size.y
+      value: 0.14368403
       objectReference: {fileID: 0}
-    - target: {fileID: 7835374596194114509, guid: feffd919b7f9d0441ad347a35e7c3b78, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
+    - target: {fileID: 8138899698116253831, guid: feffd919b7f9d0441ad347a35e7c3b78, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.19892162
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
