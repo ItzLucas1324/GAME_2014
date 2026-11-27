@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 2f, ledgeCheckDistance = 0.5f, playerAgroDistance = 5f, stopDistance = 1f, hitStunTime = 0.5f, forceKnockbackSpeed = 6f, meleeCooldown = 1f, spriteFadeRate = 1f;
+    [SerializeField] private float moveSpeed = 2f, ledgeCheckDistance = 0.5f, playerAgroDistance = 5f, stopDistance = 1f, hitStunTime = 0.5f, forceKnockbackSpeed = 6f, meleeCooldown = 1f, spriteFadeRate = 1f, verticalSightRange = 1f;
     [SerializeField] private int maxHealth = 10;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] GameObject projectilePrefab, meleeHitBox, healthPickup, forcePickup;
@@ -36,8 +36,10 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
-        float playerDistance = Vector2.Distance(player.transform.position, transform.position);
-        isPlayerInSight = playerDistance <= playerAgroDistance;
+        float distanceX = Mathf.Abs(player.transform.position.x - transform.position.x);
+        float distanceY = Mathf.Abs(player.transform.position.y - transform.position.y);
+
+        isPlayerInSight = distanceX <= playerAgroDistance && distanceY <= verticalSightRange;
 
         an.SetBool("IsDead", isDead);
     }
@@ -178,7 +180,14 @@ public class EnemyAI : MonoBehaviour
             meleeHitBox.SetActive(false);
             hitTimer = hitStunTime;
             TakeDamage(player.currentDamage);
-            an.Play("CloneIdle");
+
+            var state = an.GetCurrentAnimatorStateInfo(0);
+            bool knockedDown = state.IsName("CloneFall");
+
+            if (!knockedDown)
+            {
+                an.Play("CloneIdle");
+            }
         }
 
         if (collision.gameObject.CompareTag("PlayerForce"))
