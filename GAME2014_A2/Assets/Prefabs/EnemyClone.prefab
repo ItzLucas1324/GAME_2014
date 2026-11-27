@@ -176,12 +176,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
   moveSpeed: 2
   ledgeCheckDistance: 0.5
-  playerAgroDistance: 5
+  playerAgroDistance: 6
   stopDistance: 1.5
   hitStunTime: 0.5
   forceKnockbackSpeed: 6
   meleeCooldown: 1
   spriteFadeRate: 1
+  verticalSightRange: 1
   maxHealth: 10
   groundLayer:
     serializedVersion: 2

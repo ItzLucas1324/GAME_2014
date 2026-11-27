@@ -11,6 +11,7 @@ TagManager:
   - EnemyBullet
   - Health
   - Force
+  - Credit
   layers:
   - Default
   - TransparentFX

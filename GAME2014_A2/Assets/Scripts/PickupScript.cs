@@ -3,6 +3,7 @@ using UnityEngine;
 public class PickupScript : MonoBehaviour
 {
     [SerializeField] private float bobHeight = 0.5f, bobSpeed = 1f;
+    [System.NonSerialized] public bool canBump = true;
     Vector2 startPos;
 
     void Start()
@@ -12,6 +13,9 @@ public class PickupScript : MonoBehaviour
 
     void Update()
     {
+        if (!canBump)
+            return;
+
         float newYPos = startPos.y + Mathf.Sin(Time.time * bobSpeed) * bobHeight;
         transform.position = new Vector2(transform.position.x, newYPos);
     }

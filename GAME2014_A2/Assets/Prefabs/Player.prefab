@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 5690204567894837073}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 4
-  jumpForce: 10
+  jumpForce: 11
   sprintMulitplier: 1.8
   doubleTapWindow: 0.3
   backAttackWindow: 0.25
@@ -420,4 +420,5 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   forceMeter: {fileID: 0}
   backAttackColliderPos: {x: -0.429, y: 0}
+  scoreText: {fileID: 0}
   damage: 3

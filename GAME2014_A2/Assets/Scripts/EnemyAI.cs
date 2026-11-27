@@ -242,6 +242,8 @@ public class EnemyAI : MonoBehaviour
     {
         rb.simulated = false;
 
+        player.SetScore(2);
+
         int randomNum;
         randomNum = Random.Range(0, 101);
 

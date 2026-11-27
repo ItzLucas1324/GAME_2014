@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject attackHitBox, forceHitBox;
     [SerializeField] Slider healthBar, forceMeter;
     [SerializeField] Vector2 backAttackColliderPos;
+    [SerializeField] TMP_Text scoreText;
     private float lastTapTime = -1f, lastTapDirection = 1f, lastBackTapTime = -1f, prevMoveX = 0f, lastUpTapTime = -1f, prevMoveY = 0f, speed, parryTimer, autoRunDirection = 0f;
     private Vector2 movement;
     private Vector2 frontAttackColliderPos;
@@ -17,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public bool canParry { get; private set; }
     public bool isBlocking { get; private set; }
     public int damage = 3;
+    private int score = 0;
     Rigidbody2D rb;
     Animator an;
     GameManager gameManager;
@@ -29,6 +32,8 @@ public class PlayerController : MonoBehaviour
         an = GetComponent<Animator>();
         gameManager = FindAnyObjectByType<GameManager>();
         forceScript = FindAnyObjectByType<ForceScript>();
+
+        scoreText.text = "Score: " + score;
 
         frontAttackColliderPos = attackHitBox.transform.localPosition;
 
@@ -418,6 +423,12 @@ public class PlayerController : MonoBehaviour
 
             Destroy(collision.gameObject);
         }
+    }
+
+    public void SetScore(int amount)
+    {
+        score += amount;
+        scoreText.text = "Score: " + score;
     }
 
     public void TakeDamage(int amount)
