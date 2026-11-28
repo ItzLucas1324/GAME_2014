@@ -4,16 +4,19 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5.0f, jumpForce = 5.0f, sprintMulitplier = 1.8f, doubleTapWindow = 0.3f, backAttackWindow = 0.25f, upAttackWindow = 0.25f, backFlipWindow = 0.25f, parryTime = 0.3f;
+    [SerializeField] private float moveSpeed = 5.0f, jumpForce = 5.0f, sprintMulitplier = 1.8f, doubleTapWindow = 0.3f,
+        backAttackWindow = 0.25f, upAttackWindow = 0.25f, backFlipWindow = 0.25f, parryTime = 0.3f;
     [SerializeField] private int maxHealth = 10, maxForce = 10;
     [SerializeField] GameObject attackHitBox, forceHitBox;
     [SerializeField] Slider healthBar, forceMeter;
     [SerializeField] Vector2 backAttackColliderPos;
     [SerializeField] TMP_Text scoreText;
-    private float lastTapTime = -1f, lastTapDirection = 1f, lastBackTapTime = -1f, prevMoveX = 0f, lastUpTapTime = -1f, prevMoveY = 0f, speed, parryTimer, autoRunDirection = 0f;
+    private float lastTapTime = -1f, lastTapDirection = 1f, lastBackTapTime = -1f, prevMoveX = 0f,
+        lastUpTapTime = -1f, prevMoveY = 0f, speed, parryTimer, autoRunDirection = 0f;
     private Vector2 movement;
     private Vector2 frontAttackColliderPos;
-    private bool jumpPressed = false, attackPressed = false, airAttackPressed = false, isGrounded, isSprinting = false, blockHeld = false, forceHeld = false, isUsingForce = false, isBackFlipping = false, controlIsLocked = false, deathHandled = false;
+    private bool jumpPressed = false, attackPressed = false, airAttackPressed = false, isGrounded, isSprinting = false, blockHeld = false, 
+        forceHeld = false, isUsingForce = false, isBackFlipping = false, controlIsLocked = false, deathHandled = false;
     [System.NonSerialized] public bool isDead = false;
     [System.NonSerialized] public int currentDamage, currentHealth, currentForce;
     public bool canParry { get; private set; }
@@ -31,7 +34,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         an = GetComponent<Animator>();
         gameManager = FindAnyObjectByType<GameManager>();
-        forceScript = FindAnyObjectByType<ForceScript>();
+        forceScript = forceHitBox.GetComponent<ForceScript>();
 
         scoreText.text = "Score: " + score;
 

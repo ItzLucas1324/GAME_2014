@@ -16,7 +16,7 @@ public class ForceScript : MonoBehaviour
         ForceLightning
     }
 
-    void Start()
+    void Awake()
     {
         mode = ForceMode.None;
 
